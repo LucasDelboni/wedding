@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
 import History from './sections/History';
 import Countdown from './sections/Countdown';
 import Cerimony from './sections/Cerimony';
@@ -12,10 +13,13 @@ import '@fontsource/roboto/700.css';
 function App() {
   return (
     <div className="App">
-      <History/>
-      <Countdown/>
-      <Cerimony/>
-      <Reception/>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <History/>
+        <Countdown/>
+        <Cerimony/>
+        <Reception/>
+      </Container>
     </div>
   );
 }
