@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import History from './sessions/History';
+import Countdown from './sessions/Countdown';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
   return (
@@ -18,6 +24,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <History/>
+      <Countdown/>
     </div>
   );
 }
