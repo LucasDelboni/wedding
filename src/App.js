@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import History from './sessions/History';
-import Countdown from './sessions/Countdown';
+import History from './sections/History';
+import Countdown from './sections/Countdown';
+import Cerimony from './sections/Cerimony';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -26,6 +27,7 @@ function App() {
       </header>
       <History/>
       <Countdown/>
+      <Cerimony/>
     </div>
   );
 }
