@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Grid2 from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
 
 
 const countDownDate = new Date(2023, 10, 7, 16).getTime();
@@ -21,7 +22,35 @@ export default function Countdown() {
 
     return (
         <div>
-            <h1>{timeLeft.days}</h1>
+            <h1>Contagem Regressiva</h1>
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={2}>
+                    <Grid xs={3}>
+                        <Circle text={timeLeft.days}/>
+                        <span>Dias</span>
+                    </Grid>
+                    <Grid xs={3}>
+                        <Circle text={timeLeft.hours}/>
+                        <span>Horas</span>
+                    </Grid>
+                    <Grid xs={3}>
+                        <Circle text={timeLeft.minutes}/>
+                        <span>Minutos</span>
+                    </Grid>
+                    <Grid xs={3}>
+                        <Circle text={timeLeft.seconds}/>
+                        <span>Segundos</span>
+                    </Grid>
+                </Grid>
+            </Box>
+        </div>
+    )
+}
+
+function Circle({text}) {
+    return (
+        <div>
+            <span>{text}</span>
         </div>
     )
 }
