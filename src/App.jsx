@@ -10,6 +10,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import Profiel from './sections/Profiel';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <CssBaseline />
       <Container style={{backgroundImage: "url('inner-background.jpg')"}}>
         <br></br>
+        <Profiel/>
         <History/>
         <Photos/>
         <Countdown/>
