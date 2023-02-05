@@ -8,7 +8,7 @@ export default function Profiel() {
             <h1>Os noivos</h1>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={12}>
-                    <Grid xs={12} md={6}>
+                    <Grid s={12} md={6}>
                         <div className='photo-text'>
                             <Avatar
                                 alt="Remy Sharp"
@@ -22,7 +22,7 @@ export default function Profiel() {
                             </p>
                         </div>
                     </Grid>
-                    <Grid xs={12} md={6}>
+                    <Grid s={12} md={6}>
                         <div className='photo-text'>
                             <Avatar
                                 alt="Remy Sharp"
