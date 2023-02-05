@@ -61,6 +61,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Local development
+[Docker](https://docs.docker.com/get-docker/) and Docker Compose are optional, but highly recommended to run a local version of the Wedding application. If you're coding in a Windows machine, make sure that you follow the WSL 2 set of instructions while installing Docker.
+
+To spin up the application, simply run:
+```bash
+docker compose up
+```
+
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
