@@ -13,9 +13,9 @@ import '@fontsource/roboto/700.css';
 
 function App() {
   return (
-    <div className="App" style={{backgroundSize: "100%", backgroundImage: "url('background.png')"}}>
+    <div className="App" style={{backgroundImage: "url('inner-background.jpg')"}}>
       <CssBaseline />
-      <Container style={{backgroundImage: "url('inner-background.jpg')"}}>
+      <Container>
         <br></br>
         <History/>
         <Photos/>
