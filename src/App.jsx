@@ -5,6 +5,7 @@ import History from './sections/History';
 import Countdown from './sections/Countdown';
 import Cerimony from './sections/Cerimony';
 import Reception from './sections/Reception';
+import Photos from './sections/Photos';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -12,10 +13,12 @@ import '@fontsource/roboto/700.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundSize: "100%", backgroundImage: "url('background.png')"}}>
       <CssBaseline />
-      <Container maxWidth="sm">
+      <Container style={{backgroundImage: "url('inner-background.jpg')"}}>
+        <br></br>
         <History/>
+        <Photos/>
         <Countdown/>
         <Cerimony/>
         <Reception/>
