@@ -5,7 +5,6 @@ import History from './sections/History';
 import Countdown from './sections/Countdown';
 import Cerimony from './sections/Cerimony';
 import Reception from './sections/Reception';
-import Photos from './sections/Photos';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -20,7 +19,6 @@ function App() {
         <br></br>
         <Profile/>
         <History/>
-        <Photos/>
         <Countdown/>
         <Cerimony/>
         <Reception/>
