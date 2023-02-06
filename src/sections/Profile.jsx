@@ -2,7 +2,7 @@ import { Avatar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 
-export default function Profiel() {
+export default function Profile() {
     return (
         <div className='margin-box'>
             <h1>Os noivos</h1>
@@ -12,7 +12,7 @@ export default function Profiel() {
                         <div className='photo-text'>
                             <Avatar
                                 alt="Remy Sharp"
-                                src="profiel/lucas.jpg"
+                                src="profile/lucas.jpg"
                                 sx={{ width: 276, height: 276 }}
                             />
                         </div>
@@ -26,7 +26,7 @@ export default function Profiel() {
                         <div className='photo-text'>
                             <Avatar
                                 alt="Remy Sharp"
-                                src="profiel/adriana.jpg"
+                                src="profile/adriana.jpg"
                                 sx={{ width: 276, height: 276 }}
                             />
                         </div>
