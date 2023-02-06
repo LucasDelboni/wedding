@@ -27,8 +27,8 @@ export default function Profile() {
                         <div className='photo-text'>
                             <Avatar
                                 alt="Remy Sharp"
-                                src="profile/adriana.jpg"
-                                sx={{ width: 276, height: 276 }}
+                                src="profile/adriana2.png"
+                                sx={{ width: 500, height: 500 }}
                             />
                         </div>
                         <div className='photo-text'>
