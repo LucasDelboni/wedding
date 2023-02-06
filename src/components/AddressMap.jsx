@@ -2,7 +2,7 @@ export default function AddressMap({url, title}){
     return (
         <iframe 
             src={url}
-            height="100%"
+            height="400px"
             width="100%"
             title={title}
             style={{border: 0}}
