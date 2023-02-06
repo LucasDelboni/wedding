@@ -8,7 +8,7 @@ export default function Profile() {
         <div className='margin-box'>
             <Title title="Os noivos"></Title>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={12}>
+                <Grid container spacing={{ md: 5, lg: 12 }}>
                     <Grid s={12} md={6}>
                         <div className='photo-text'>
                             <Avatar
