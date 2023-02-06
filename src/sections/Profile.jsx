@@ -1,11 +1,12 @@
 import { Avatar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
+import Title from '../components/Title'
 
 export default function Profile() {
     return (
         <div className='margin-box'>
-            <h1>Os noivos</h1>
+            <Title title="Os noivos"></Title>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={12}>
                     <Grid s={12} md={6}>

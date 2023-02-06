@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
+import Title from "../components/Title";
 
 
 const countDownDate = new Date(2023, 10, 7, 16).getTime();
@@ -22,7 +23,7 @@ export default function Countdown() {
 
     return (
         <div>
-            <h1>Contagem Regressiva</h1>
+            <Title title="Contagem Regressiva"/>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
                     <Grid xs={3}>

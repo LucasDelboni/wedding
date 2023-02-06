@@ -1,10 +1,11 @@
 import AddressMap from "../components/AddressMap";
+import Title from "../components/Title";
 
 export default function Cerimony(){
 
   return (
     <div>
-        <h1>Cerimônia</h1>
+        <Title title="Cerimônia"/>
         <p>Gostaríamos muito de contar com a presença de todos vocês para rezer por nossa felicidade!</p>
         <p>A cerimônia será rápida e tentaremos ser extremamente pontuais. Contamos com vocês!</p>
         <h3><b>Dia 7 de outubro de 2023 na Paróquia Nossa Senhora Achiropita</b></h3>

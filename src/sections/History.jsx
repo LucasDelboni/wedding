@@ -7,12 +7,13 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import Title from '../components/Title';
 
 
 export default function History() {
     return (
         <div>
-            <h1>Nossa historia</h1>
+            <Title title="Nossa historia"/>
             <Timeline position="alternate">
                 <TimelineItem>
                     <TimelineOppositeContent
