@@ -31,7 +31,7 @@ export default function History() {
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <img
-                            src="/history/nos-conhecemos.jpg"
+                            src="history/nos-conhecemos.jpg"
                             alt="Foto de Adriana e Lucas motando o rack da sala quando começaram a morar juntos."
                             width={"100%"}
                         />
@@ -52,7 +52,7 @@ export default function History() {
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <img
-                            src="/history/moved-in-together.jpg"
+                            src="history/moved-in-together.jpg"
                             alt="Foto de Adriana e Lucas motando o rack da sala quando começaram a morar juntos."
                             width={"100%"}
                         />
@@ -73,7 +73,7 @@ export default function History() {
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <video width={"100%"} controls>
-                            <source src="/history/pedido.mp4" type="video/mp4" />
+                            <source src="history/pedido.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </TimelineContent>
@@ -98,11 +98,11 @@ export default function History() {
 
 const photos = [
     {
-        img: '/history/nos-conhecemos.jpg',
+        img: 'history/nos-conhecemos.jpg',
         title: 'Nos conhecemos',
     },
     {
-        img: '/history/moved-in-together.jpg',
+        img: 'history/moved-in-together.jpg',
         title: 'Começamos a morar juntos',
     },
     {
