@@ -43,7 +43,7 @@ export default function History() {
                         variant="body2"
                         color="text.secondary"
                     >
-                        Coemçamos a morar juntos
+                        Começamos a morar juntos
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
