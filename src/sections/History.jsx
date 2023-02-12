@@ -1,85 +1,46 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
 import Title from '../components/Title';
+import React from 'react';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Unstable_Grid2';
 
+const wrapper = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+}
 
 export default function History() {
     return (
         <div>
             <Title title="Nossa historia"/>
-            <Timeline position="alternate">
-                <TimelineItem>
-                    <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        align="right"
-                        variant="body2"
-                        color="text.secondary" s
-                    >
-                        Nos conhecemos
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineConnector />
-                        <TimelineDot>
-                        </TimelineDot>
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <img
-                            src="history/nos-conhecemos.jpg"
-                            alt="Foto de Adriana e Lucas motando o rack da sala quando começaram a morar juntos."
-                            width={"100%"}
-                        />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        variant="body2"
-                        color="text.secondary"
-                    >
-                        Começamos a morar juntos
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineConnector />
-                        <TimelineDot/>
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <img
-                            src="history/moved-in-together.jpg"
-                            alt="Foto de Adriana e Lucas motando o rack da sala quando começaram a morar juntos."
-                            width={"100%"}
-                        />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        variant="body2"
-                        color="text.secondary"
-                    >
-                        O pedido
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineConnector />
-                        <TimelineDot/>
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <video width={"100%"} controls>
-                            <source src="history/pedido.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </TimelineContent>
-                </TimelineItem>
-            </Timeline>
+
+            <div style={wrapper}>
+                <TimeLineItem title="Nos conhecemos">
+                    <img
+                        src="history/nos-conhecemos.jpg"
+                        alt="Foto de Adriana e Lucas motando o rack da sala quando começaram a morar juntos."
+                        width={"100%"}
+                    />
+                </TimeLineItem>
+                <TimeLineItem title="Começamos a morar juntos">
+                    <img
+                        src="history/moved-in-together.jpg"
+                        alt="Foto de Adriana e Lucas motando o rack da sala quando começaram a morar juntos."
+                        width={"100%"}
+                    />
+                </TimeLineItem>
+                <TimeLineItem title="O pedido">
+                    <video width={"100%"} controls>
+                        <source src="history/pedido.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </TimeLineItem>
+            </div>
+
+            
             <h3>E muitos outros momentos incríveis</h3>
             <ImageList variant="masonry" cols={3} gap={8}>
                 {photos.map((item) => (
@@ -96,6 +57,36 @@ export default function History() {
         </div>
     )
 }
+  
+const lineStyle = {
+    borderLeft: '1px solid #bdbdbd',
+    borderRight: '1px solid #bdbdbd',
+    height: '15vh',
+    marginBottom: '1vh'
+}
+
+const Line = () => <div id="timeline1" style={lineStyle} />
+
+const TimeLineItem = ({title, children}) => {
+    return (
+      <>
+        <Line/>
+        <Typography variant="h5">
+          {title}
+        </Typography>
+        <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={{ md: 5, lg: 12 }}>
+                <Grid s={0} md={3}/>
+                <Grid s={12} md={6}>
+                    {children}
+                </Grid>
+                <Grid s={0} md={3}/>
+            </Grid>
+        </Box>
+        <div style={{marginBottom: '2vh'}}/>
+      </>
+    );
+};
 
 const photos = [
     {
