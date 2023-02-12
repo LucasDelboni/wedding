@@ -10,6 +10,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Profile from './sections/Profile';
+import Gifts from './sections/Gifts';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Countdown/>
         <Cerimony/>
         <Reception/>
+        <Gifts/>
       </Container>
     </div>
   );
