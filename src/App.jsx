@@ -14,7 +14,7 @@ import Gifts from './sections/Gifts';
 
 function App() {
   return (
-    <div className="App" style={{backgroundImage: "url('inner-background.jpg')"}}>
+    <div className="App">
       <CssBaseline />
       <Container>
         <br></br>

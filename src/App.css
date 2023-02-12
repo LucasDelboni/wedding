@@ -10,6 +10,12 @@ h1 {
   font-weight: 500;
 }
 
+h2 {
+  margin-bottom: 8%;
+  font-size: 3em;
+  font-weight: 500;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -54,4 +60,46 @@ h1 {
 
 .margin-box {
   margin-bottom: 10%;
+}
+
+
+.photo-text {
+  display: flex;
+  justify-content: space-around;
+  text-align: justify;
+}
+
+.size-x {
+  height: 100px;
+  width: 100px;
+}
+
+.circle {
+  background: #96115a;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 2em;
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
+.circle_text {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.page-count-down{
+  padding-top: 8%;
+  padding-bottom: 8%;
+  background-color: #f7f7f3;
 }

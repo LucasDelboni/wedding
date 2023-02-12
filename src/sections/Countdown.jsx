@@ -17,30 +17,26 @@ export default function Countdown() {
         return () => clearTimeout(timer);
     });
 
-    if(timeLeft === {}) {
+    if (timeLeft === {}) {
         <></>
     }
 
     return (
-        <div>
-            <Title title="Contagem Regressiva"/>
+        <div className="page-count-down">
+            <h2>Contagem Regressiva</h2>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={7}>
                     <Grid xs={3}>
-                        <Circle text={timeLeft.days}/>
-                        <span>Dias</span>
+                        <Circle text={timeLeft.days} text_bottom={"Dias"} />
                     </Grid>
                     <Grid xs={3}>
-                        <Circle text={timeLeft.hours}/>
-                        <span>Horas</span>
+                        <Circle text={timeLeft.hours} text_bottom={"Horas"} />
                     </Grid>
                     <Grid xs={3}>
-                        <Circle text={timeLeft.minutes}/>
-                        <span>Minutos</span>
+                        <Circle text={timeLeft.minutes} text_bottom={"Minutos"} />
                     </Grid>
                     <Grid xs={3}>
-                        <Circle text={timeLeft.seconds}/>
-                        <span>Segundos</span>
+                        <Circle text={timeLeft.seconds} text_bottom={"Segundos"} />
                     </Grid>
                 </Grid>
             </Box>
@@ -48,11 +44,12 @@ export default function Countdown() {
     )
 }
 
-function Circle({text}) {
+function Circle({ text, text_bottom}) {
     return (
-        <div>
-            <span>{text}</span>
-        </div>
+        <>
+            <span className="size-x circle">{text}</span>
+            <p className="circle_text">{text_bottom}</p>
+        </>
     )
 }
 
@@ -63,7 +60,7 @@ function calculateTimeLeft(countDownDate) {
     if (distance < 0) {
         return null;
     }
-    
+
     return {
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
         hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
