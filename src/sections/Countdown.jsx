@@ -22,8 +22,8 @@ export default function Countdown() {
     }
 
     return (
-        <div className="page-count-down">
-            <h2>Contagem Regressiva</h2>
+        <>
+            <Title title="Contagem Regressiva"></Title>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={7}>
                     <Grid xs={3}>
@@ -40,7 +40,7 @@ export default function Countdown() {
                     </Grid>
                 </Grid>
             </Box>
-        </div>
+        </>
     )
 }
 

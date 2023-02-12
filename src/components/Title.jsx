@@ -2,7 +2,6 @@ export default function Title({title}) {
     return (
         <div style={{marginBottom: '3%', textAlign: 'center'}}>
             <h1 style={titleStyle}>{title}</h1>
-            <img src="floral-titulo.png" alt="arranjo floral"></img>
         </div>
     )
 }
