@@ -76,11 +76,11 @@ const TimeLineItem = ({title, children}) => {
         </Typography>
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={{ md: 5, lg: 12 }}>
-                <Grid s={0} md={3}/>
-                <Grid s={12} md={6}>
+                <Grid xs={0} md={3}/>
+                <Grid xs={12} md={6}>
                     {children}
                 </Grid>
-                <Grid s={0} md={3}/>
+                <Grid xs={0} md={3}/>
             </Grid>
         </Box>
         <div style={{marginBottom: '2vh'}}/>
