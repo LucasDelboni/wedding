@@ -61,30 +61,6 @@ h2 {
   text-align: justify;
 }
 
-.size-x {
-  height: 100px;
-  width: 100px;
-}
-
-.circle {
-  background: #93AAA5;
-  color: #ffffff;
-  border-radius: 50%;
-  font-size: 2em;
-
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: auto;
-}
-
 .circle_text {
   padding-top: 10px;
   font-weight: bold;
