@@ -5,6 +5,7 @@ import { Avatar } from '@mui/material';
 
 import './Timeline.css';
 import TimelineItem from './Item';
+import Title from '../../components/Title';
 
 
 export default function Timeline() {
@@ -43,8 +44,11 @@ export default function Timeline() {
 
 
     return (
-        <MuiTimeline className='timeline' position="alternate">
-            {timelineItems.map(timelineItem => (<TimelineItem {...timelineItem} />))}
-        </MuiTimeline>
+        <>
+            <Title title="Nossa história" />
+            <MuiTimeline className='timeline' position="alternate">
+                {timelineItems.map(timelineItem => (<TimelineItem {...timelineItem} />))}
+            </MuiTimeline>
+        </>
     )
 }
