@@ -1,9 +1,7 @@
 import Button from '@mui/material/Button';
 import Title from '../components/Title';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions, CardMedia } from '@mui/material';
+import { CardMedia } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';

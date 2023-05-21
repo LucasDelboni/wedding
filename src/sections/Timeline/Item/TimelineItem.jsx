@@ -1,7 +1,6 @@
 
 import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab';
 import { Box, Typography } from '@mui/material';
-import { Avatar } from '@mui/material';
 
 import HeartIcon from '@mui/icons-material/Favorite';
 
