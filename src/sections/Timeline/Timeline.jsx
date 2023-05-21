@@ -1,14 +1,7 @@
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Title from '../../components/Title';
 
 import React from 'react';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import { Timeline as MuiTimeline, TimelineOppositeContent, TimelineSeparator } from '@mui/lab';
+import { Timeline as MuiTimeline } from '@mui/lab';
 import { Avatar } from '@mui/material';
-
-import HeartIcon from '@mui/icons-material/Favorite';
 
 import './Timeline.css';
 import TimelineItem from './Item';
