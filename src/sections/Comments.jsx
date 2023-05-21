@@ -11,7 +11,7 @@ const allComents = [
         date: new Date(),
     }, {
         name: 'Laury Clark Bueno',
-        comment: 'Incrível como um <i>website<\i> consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um "riso" e precisos como uma "dança".\n\nA vida é longa e o mundo é de vocês.',
+        comment: 'Incrível como um website consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um "riso" e precisos como uma "dança".\n\nA vida é longa e o mundo é de vocês.',
         date: new Date(),
    
     }, {
