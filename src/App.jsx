@@ -10,6 +10,7 @@ import '@fontsource/roboto/700.css';
 import Profile from './sections/Profile';
 import Gifts from './sections/Gifts';
 import Section from './components/Section';
+import Comments from './sections/Comments'
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
       </Section>
       <Section even>
         <Gifts />
+      </Section>
+      <Section>
+        <Comments/>
       </Section>
     </>
   );
