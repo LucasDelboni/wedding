@@ -4,23 +4,23 @@ import Title from "../components/Title";
 import { useState } from "react";
 import axios from "axios";
 
-const allComents = [
+const oldComents = [
     {
         name: 'Fernando Pessoa',
-        comment: 'Amo como ama o amor.\nNão conheço nenhuma outra razão para amar senão amar.\nQue queres que te diga, além de que te amo, se o que quero dizer-te é que te amo?',
+        message: 'Amo como ama o amor.\nNão conheço nenhuma outra razão para amar senão amar.\nQue queres que te diga, além de que te amo, se o que quero dizer-te é que te amo?',
         date: new Date(),
     }, {
         name: 'Laury Clark Bueno',
-        comment: 'Incrível como um <i>website<\i> consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um "riso" e precisos como uma "dança".\n\nA vida é longa e o mundo é de vocês.',
+        message: 'Incrível como um <i>website<\i> consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um "riso" e precisos como uma "dança".\n\nA vida é longa e o mundo é de vocês.',
         date: new Date(),
    
     }, {
         name: 'Tania',
-        comment: 'Parabens aos noivos',
+        message: 'Parabens aos noivos',
         date: new Date(),
     }, {
         name: 'Vinicius de moraes',
-        comment: 'Caros noivos,\nParabéns pelo enlace iminente. Que a vida de vocês seja um eterno poema de amor.\nCom carinho,\nVinicius de Moraes',
+        message: 'Caros noivos,\nParabéns pelo enlace iminente. Que a vida de vocês seja um eterno poema de amor.\nCom carinho,\nVinicius de Moraes',
         date: new Date(),
     },
 ]
@@ -28,6 +28,7 @@ const allComents = [
 export default function Comments() {
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
+    const [allComents, setAllComents] = useState(oldComents)
 
     function handleSubmit (event) {
         event.preventDefault()
@@ -37,6 +38,7 @@ export default function Comments() {
                 message: message,
             }
         })
+        setAllComents(allComents.concat([{name, message, date: new Date()}]))
     }
 
     return (
@@ -54,7 +56,7 @@ export default function Comments() {
                 {allComents
                     .sort((a, b) => a.date - b.date)
                     .map(comment => 
-                        <Comment name={comment.name} date={comment.date} comment={comment.message} key={comment.date+comment.name}/>
+                        <Comment name={comment.name} date={comment.date} message={comment.message} key={comment.date+comment.name}/>
                     )}
             </List>
             <form autoComplete="off" onSubmit={handleSubmit}>
@@ -108,5 +110,4 @@ function Comment({ name, message, date }) {
             </div>
         </Paper>
     )
-
 }
