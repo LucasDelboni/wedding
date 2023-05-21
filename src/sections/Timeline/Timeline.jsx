@@ -14,7 +14,7 @@ export default function Timeline() {
             date: "07/07/2017",
             children: (
                 <Avatar
-                    src="history/nos-conhecemos.jpg"
+                    src="timeline/nos-conhecemos.jpg"
                     sx={{ width: 240, height: 240 }}
                 />
             )
@@ -24,7 +24,7 @@ export default function Timeline() {
             date: "04/09/2021",
             children: (
                 <Avatar
-                    src="history/morar-juntos.jpg"
+                    src="timeline/morar-juntos.jpg"
                     sx={{ width: 240, height: 240 }}
                 />
             )
@@ -34,7 +34,7 @@ export default function Timeline() {
             date: "04/10/2022",
             children: (
                 <video width={"100%"} controls>
-                    <source src="history/pedido.mp4" type="video/mp4" />
+                    <source src="timeline/pedido.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             ),
