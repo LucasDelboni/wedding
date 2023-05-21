@@ -15,13 +15,13 @@ export default function Profile() {
                     <div className='photo-text'>
                         <Avatar
                             alt="Remy Sharp"
-                            src="profile/lucas2.png"
+                            src="profile/lucas-profile.jpg"
                             sx={{ width: 276, height: 276 }}
                         />
                     </div>
                     <div className='photo-text'>
                         <p>
-                            Adriana Oliveira
+                            Lucas Delboni
                         </p>
                     </div>
                 </Grid>
@@ -29,13 +29,13 @@ export default function Profile() {
                     <div className='photo-text'>
                         <Avatar
                             alt="Remy Sharp"
-                            src="profile/adriana3.png"
+                            src="profile/adriana-profile.jpg"
                             sx={{ width: 276, height: 276 }}
                         />
                     </div>
                     <div className='photo-text'>
                         <p>
-                            Lucas Delboni
+                            Adriana Oliveira
                         </p>
                     </div>
                 </Grid>
