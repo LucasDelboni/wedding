@@ -27,14 +27,15 @@ const allComents = [
 
 export default function Comments() {
     const [name, setName] = useState('')
-    const [comment, setComment] = useState('')
+    const [message, setMessage] = useState('')
 
     function handleSubmit (event) {
         event.preventDefault()
-        axios.post('/comment', {
-            'fields[name]': name,
-            'fields[comment]': comment,
-            'fields[date]': new Date(),
+        axios.post('https://couve.laury.dev/v2/entry/LucasDelboni/wedding/main/comments', {
+            fields: {
+                name: name,
+                message: message,
+            }
         })
     }
 
@@ -53,7 +54,7 @@ export default function Comments() {
                 {allComents
                     .sort((a, b) => a.date - b.date)
                     .map(comment => 
-                        <Comment name={comment.name} date={comment.date} comment={comment.comment} key={comment.date+comment.name}/>
+                        <Comment name={comment.name} date={comment.date} comment={comment.message} key={comment.date+comment.name}/>
                     )}
             </List>
             <form autoComplete="off" onSubmit={handleSubmit}>
@@ -69,12 +70,12 @@ export default function Comments() {
                     <FormLabel>Comentário</FormLabel>
                     <TextField
                         required
-                        id="comment"
+                        id="message"
                         label="Parabéns!"
                         multiline
                         rows={4}
-                        value={comment}
-                        onChange={e => setComment(e.target.value)}
+                        value={message}
+                        onChange={e => setMessage(e.target.value)}
                     />
                     <Button variant="contained" endIcon={<SendIcon />} onClick={handleSubmit}>
                         Enviar
@@ -85,7 +86,7 @@ export default function Comments() {
     )
 }
 
-function Comment({ name, comment, date }) {
+function Comment({ name, message, date }) {
     const day = (date.getDate()+'').length === 1 ? '0'+date.getDate() : date.getDate()
     const month = (date.getMonth()+'').length === 1 ? '0'+date.getMonth(): date.getMonth()
     const year = date.getFullYear()
@@ -102,7 +103,7 @@ function Comment({ name, comment, date }) {
             </div>
             <div style={{marginLeft: '2%', marginRight: '2%'}}>
                 <Typography variant="body2" style={{whiteSpace: 'pre-wrap'}}>
-                    {comment}
+                    {message}
                 </Typography>
             </div>
         </Paper>
