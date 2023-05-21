@@ -5,7 +5,7 @@ import Title from '../components/Title'
 
 export default function Profile() {
     return (
-        <div className='margin-box'>
+        <>
             <Title title="Os noivos"></Title>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ md: 5, lg: 12 }}>
@@ -39,6 +39,6 @@ export default function Profile() {
                     </Grid>
                 </Grid>
             </Box>
-        </div>
+        </>
     )
 }
