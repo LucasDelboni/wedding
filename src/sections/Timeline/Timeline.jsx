@@ -14,9 +14,10 @@ export default function Timeline() {
             title: "Nos conhecemos",
             date: "07/07/2017",
             children: (
-                <Avatar
+                <img
+                    alt="Nos conhecemos"
+                    className="timeline__image"
                     src="timeline/nos-conhecemos.jpg"
-                    sx={{ width: 240, height: 240 }}
                 />
             )
         },
@@ -24,9 +25,10 @@ export default function Timeline() {
             title: "Começamos a morar juntos",
             date: "04/09/2021",
             children: (
-                <Avatar
+                <img
+                    alt="Começamos a morar juntos"
+                    className="timeline__image"
                     src="timeline/morar-juntos.jpg"
-                    sx={{ width: 240, height: 240 }}
                 />
             )
         },
