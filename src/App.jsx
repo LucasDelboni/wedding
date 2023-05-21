@@ -11,6 +11,7 @@ import Profile from './sections/Profile';
 import Gifts from './sections/Gifts';
 import Section from './components/Section';
 import Comments from './sections/Comments'
+import Godparents from './sections/Godparents';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         <Countdown />
       </Section>
       <Section even>
+        <Godparents />
+      </Section>
+      <Section>
         <Cerimony />
       </Section>
       <Section even>
