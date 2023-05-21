@@ -1,0 +1,32 @@
+.timeline .timeline__opposite-content {
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.timeline .timeline__item:nth-child(even) .timeline__opposite-content {
+  align-items: flex-start;
+}
+
+.timeline .timeline__content {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.timeline .timeline__item:nth-child(even) .timeline__content {
+  align-items: flex-end;
+}
+
+.timeline .timeline__opposite-text {
+  text-align: center;
+}
+
+.timeline .timeline__dot {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
