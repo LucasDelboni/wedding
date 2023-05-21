@@ -15,6 +15,14 @@ export default function Comments() {
     return (
         <>
             <Title title="Comentários"/>
+            <div style={{display: 'block', textAlign: 'center'}}>
+                <img
+                    src='casal.png'
+                    srcSet='casal.png'
+                    alt='Desenho que a Adrina fez do casal'
+                    loading="lazy"
+                />
+            </div>
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <FormControl fullWidth sx={{ m: 1 }}>
                     <FormLabel>Nome</FormLabel>
