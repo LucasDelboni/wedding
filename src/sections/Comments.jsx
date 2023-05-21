@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, List, TextField, Typography } from "@mui/material";
+import { Button, FormControl, FormLabel, List, Paper, TextField, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../components/Title";
 import { useState } from "react";
@@ -11,7 +11,7 @@ const allComents = [
         date: new Date(),
     }, {
         name: 'Laury Clark Bueno',
-        comment: 'Incrível como 40 segundos de vídeo conseguem mostrar tanto do que vocês são juntos.\n\nEspontâneos como um riso e precisos como uma dança.\n\nA vida é longa e o mundo é de vocês.',
+        comment: 'Incrível como um <i>website<\i> consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um "riso" e precisos como uma "dança".\n\nA vida é longa e o mundo é de vocês.',
         date: new Date(),
    
     }, {
@@ -91,17 +91,21 @@ function Comment({ name, comment, date }) {
     const year = date.getFullYear()
 
     return (
-        <div style={{marginBottom: '2%'}}>
-            <Typography style={{display: 'inline-block'}} variant="h6" component="div">
-                {name+' '}
-            </Typography>
-            <Typography style={{display: 'inline-block', marginLeft: '5px'}} sx={{ mb: 1 }} color="text.secondary">
-                {`${day}/${month}/${year}`}
-            </Typography>
-            <Typography variant="body2">
-                {comment}
-            </Typography>
-        </div>
+        <Paper elevation={3} style={{marginBottom: '1%'}}>
+            <div style={{margin: '1%'}}>
+                <Typography style={{display: 'inline-block'}} variant="h6" component="div">
+                    {name}
+                </Typography>
+                <Typography style={{display: 'inline-block', marginLeft: '5px'}} sx={{ mb: 1 }} color="text.secondary">
+                    {`${day}/${month}/${year}`}
+                </Typography>
+            </div>
+            <div style={{marginLeft: '2%', marginRight: '2%'}}>
+                <Typography variant="body2" style={{whiteSpace: 'pre-wrap'}}>
+                    {comment}
+                </Typography>
+            </div>
+        </Paper>
     )
 
 }

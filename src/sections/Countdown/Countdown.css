@@ -1,0 +1,34 @@
+.countdown__circle {
+  height: 64px;
+  width: 64px;
+
+  background: #93AAA5;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 2em;
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .countdown__circle {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.countdown__text {
+  margin-top: 16px;
+  font-weight: bold;
+  text-align: center;
+}

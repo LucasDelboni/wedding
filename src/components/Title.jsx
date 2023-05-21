@@ -7,7 +7,6 @@ export default function Title({title}) {
 }
 
 const titleStyle = {
-    marginTop: '5%',
     marginBottom: '0px',
     fontFamily: '"Great Vibes", cursive',
     fontSize: '3em',
