@@ -1,0 +1,24 @@
+[
+    {
+        "_id":"3b96aca0-f817-11ed-a82d-05a6d876bf61",
+        "name": "Fernando Pessoa",
+        "message": "Amo como ama o amor.\nNão conheço nenhuma outra razão para amar senão amar.\nQue queres que te diga, além de que te amo, se o que quero dizer-te é que te amo?",
+        "date": 1684701418
+    }, {
+        "_id":"3b96aca0-f817-11ed-a82d-05a6d876bf62",
+        "name": "Laury Clark Bueno",
+        "comment": "Incrível como um website consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um 'riso' e precisos como uma 'dança'.\n\nA vida é longa e o mundo é de vocês.",
+        "date": 1684702418
+    
+    }, {
+        "_id":"3b96aca0-f817-11ed-a82d-05a6d876bf63",
+        "name": "Tania",
+        "message": "Parabens aos noivos",
+        "date": 1684801418
+    }, {
+        "_id":"3b96aca0-f817-11ed-a82d-05a6d876bf64",
+        "name": "Vinicius de moraes",
+        "message": "Caros noivos,\nParabéns pelo enlace iminente. Que a vida de vocês seja um eterno poema de amor.\nCom carinho,\nVinicius de Moraes",
+        "date": 1685701418
+    }
+]

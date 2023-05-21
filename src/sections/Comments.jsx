@@ -1,34 +1,22 @@
 import { Button, FormControl, FormLabel, List, Paper, TextField, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../components/Title";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-
-const oldComents = [
-    {
-        name: 'Fernando Pessoa',
-        message: 'Amo como ama o amor.\nNão conheço nenhuma outra razão para amar senão amar.\nQue queres que te diga, além de que te amo, se o que quero dizer-te é que te amo?',
-        date: new Date(),
-    }, {
-        name: 'Laury Clark Bueno',
-        comment: 'Incrível como um website consegue mostrar tanto do que vocês são juntos.\n\nEspontâneos como um "riso" e precisos como uma "dança".\n\nA vida é longa e o mundo é de vocês.',
-        date: new Date(),
-   
-    }, {
-        name: 'Tania',
-        message: 'Parabens aos noivos',
-        date: new Date(),
-    }, {
-        name: 'Vinicius de moraes',
-        message: 'Caros noivos,\nParabéns pelo enlace iminente. Que a vida de vocês seja um eterno poema de amor.\nCom carinho,\nVinicius de Moraes',
-        date: new Date(),
-    },
-]
 
 export default function Comments() {
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
-    const [allComents, setAllComents] = useState(oldComents)
+    const [allComents, setAllComents] = useState([])
+
+    useEffect(() => {
+        fetch('comments.json').then(commentsData => [
+            commentsData.json().then(oldComments => 
+                setAllComents(oldComments)
+            )
+        ])
+
+    }, [])
 
     function handleSubmit (event) {
         event.preventDefault()
@@ -56,7 +44,7 @@ export default function Comments() {
                 {allComents
                     .sort((a, b) => a.date - b.date)
                     .map(comment => 
-                        <Comment name={comment.name} date={comment.date} message={comment.message} key={comment.date+comment.name}/>
+                        <Comment name={comment.name} date={new Date(comment.date)} message={comment.message} key={comment.date+comment.name}/>
                     )}
             </List>
             <form autoComplete="off" onSubmit={handleSubmit}>
@@ -90,7 +78,7 @@ export default function Comments() {
 
 function Comment({ name, message, date }) {
     const day = (date.getDate()+'').length === 1 ? '0'+date.getDate() : date.getDate()
-    const month = (date.getMonth()+'').length === 1 ? '0'+date.getMonth(): date.getMonth()
+    const month = (date.getMonth()+'').length === 1 ? '0'+(date.getMonth()+1): date.getMonth()+1
     const year = date.getFullYear()
 
     return (
