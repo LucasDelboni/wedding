@@ -2,6 +2,7 @@ import { Button, FormControl, FormLabel, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../components/Title";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Comments() {
     const [name, setName] = useState('')
@@ -10,6 +11,11 @@ export default function Comments() {
 
     function handleSubmit (event) {
         event.preventDefault()
+        axios.post('/comment', {
+            'fields[name]': name,
+            'fields[comment]': comment,
+            'fields[date]': new Date(),
+        })
     }
 
     return (
@@ -43,7 +49,7 @@ export default function Comments() {
                         value={comment}
                         onChange={e => setComment(e.target.value)}
                     />
-                    <Button variant="contained" endIcon={<SendIcon />}>
+                    <Button variant="contained" endIcon={<SendIcon />} onClick={handleSubmit}>
                         Enviar
                     </Button>
                 </FormControl>
