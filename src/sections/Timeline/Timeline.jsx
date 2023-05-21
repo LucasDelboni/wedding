@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Timeline as MuiTimeline } from '@mui/lab';
-import { Avatar } from '@mui/material';
 
 import './Timeline.css';
 import TimelineItem from './Item';
