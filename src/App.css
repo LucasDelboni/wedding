@@ -1,5 +1,8 @@
-.App {
-  text-align: center;
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -14,17 +17,6 @@ h2 {
   margin-bottom: 8%;
   font-size: 3em;
   font-weight: 500;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
