@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import Title from "../components/Title";
+import Stack from '@mui/material/Stack';
+import Title from "../../components/Title";
+import "./Countdown.css"
 
 
 const countDownDate = new Date(2023, 10, 7, 16).getTime();
@@ -24,32 +25,26 @@ export default function Countdown() {
     return (
         <>
             <Title title="Contagem Regressiva"></Title>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={7}>
-                    <Grid xs={3}>
-                        <Circle text={timeLeft.days} text_bottom={"Dias"} />
-                    </Grid>
-                    <Grid xs={3}>
-                        <Circle text={timeLeft.hours} text_bottom={"Horas"} />
-                    </Grid>
-                    <Grid xs={3}>
-                        <Circle text={timeLeft.minutes} text_bottom={"Minutos"} />
-                    </Grid>
-                    <Grid xs={3}>
-                        <Circle text={timeLeft.seconds} text_bottom={"Segundos"} />
-                    </Grid>
-                </Grid>
-            </Box>
+            <Stack
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={{ xs: 2, md: 8, lg: 12 }}>
+                <Circle text={timeLeft.days} text_bottom={"Dias"} />
+                <Circle text={timeLeft.hours} text_bottom={"Horas"} />
+                <Circle text={timeLeft.minutes} text_bottom={"Minutos"} />
+                <Circle text={timeLeft.seconds} text_bottom={"Segundos"} />
+            </Stack>
         </>
     )
 }
 
-function Circle({ text, text_bottom}) {
+function Circle({ text, text_bottom }) {
     return (
-        <>
-            <span className="size-x circle">{text}</span>
-            <p className="circle_text">{text_bottom}</p>
-        </>
+        <Box>
+            <span className="countdown__circle">{text}</span>
+            <p className="countdown__text">{text_bottom}</p>
+        </Box>
     )
 }
 

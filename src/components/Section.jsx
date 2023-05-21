@@ -1,9 +1,13 @@
 import Container from '@mui/material/Container';
 
-export default function Section({children, even}) {
+export default function Section({ children, even }) {
     let backgroundColor = even ? '#97917A' : '#FCF9F7'
     return (
-        <Container maxWidth="100%" component="section" style={{ background: backgroundColor }} paddingY={8}>
+        <Container 
+            maxWidth="100%"
+            component="section"
+            style={{ background: backgroundColor }}
+            sx={{ paddingBottom: 6, paddingTop: 6 }}>
             {children}
         </Container>
     )
