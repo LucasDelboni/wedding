@@ -16,6 +16,12 @@ function App() {
   return (
     <>
       <CssBaseline />
+      <div style={{backgroundImage: 'url("hero.jpg")', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', position: 'relative'}}>
+        <div style={{left: 0, width: '100%', textAlign: 'center', color: 'white', position: 'absolute', bottom: '0'}}>
+          <h1 style={{fontSize: '5em'}}>Adriana & Lucas</h1>
+          <p style={{fontSize: '1em'}} >07 de outubro de 2023 - São Paulo</p>
+        </div>
+      </div>
       <Section>
         <Profile />
       </Section>
