@@ -13,24 +13,24 @@ import Section from './components/Section';
 
 function App() {
   return (
-    <div className="App" >
+    <>
       <CssBaseline />
-        <Section>
-          <Profile/>
-        </Section>
-        <Section even>
-          <History/>
-        </Section>
-        <Section>
-          <Countdown/>
-        </Section>
-        <Section even>
-          <Cerimony/>
-        </Section>
-        <Section even>
-          <Gifts/>
-        </Section>
-    </div>
+      <Section>
+        <Profile />
+      </Section>
+      <Section even>
+        <History />
+      </Section>
+      <Section>
+        <Countdown />
+      </Section>
+      <Section even>
+        <Cerimony />
+      </Section>
+      <Section even>
+        <Gifts />
+      </Section>
+    </>
   );
 }
 

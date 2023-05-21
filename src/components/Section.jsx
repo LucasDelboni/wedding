@@ -1,12 +1,11 @@
 import Container from '@mui/material/Container';
 
-export default function Section({children, even}) {
-    let backgroundColor = even ? '#f9a775' : '#fcd8b4'
+export default function Section({ children, even }) {
+    let backgroundColor = even ? '#97917A' : '#FCF9F7'
+
     return (
-        <div style={{background: backgroundColor, paddingTop: '8%', paddingBottom: '8%'}}>
-            <Container>
-                {children}
-            </Container>
-        </div>
+        <Container style={{ background: backgroundColor }} paddingY={8}>
+            {children}
+        </Container>
     )
 }
