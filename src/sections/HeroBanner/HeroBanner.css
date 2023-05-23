@@ -1,0 +1,85 @@
+.hero-banner {
+  height: 100%;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner__image {
+  animation: scaling 6s 0.25s cubic-bezier(0, 0.71, 0.4, 0.97) forwards;
+  will-change: transform;
+  background-image: url("/public/hero.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-banner .hero-banner__title {
+  color: #FCF9F7;
+  font-family: 'Montaga', serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fade-in 1s 0s ease-in forwards;
+}
+
+.hero-banner .hero-banner__date {
+  color: #FCF9F7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1;
+  opacity: 0;
+  animation: fade-in 1s 1s ease-in forwards;
+}
+
+/* Media queries */
+@media only screen and (min-width: 600px) {
+  .hero-banner .hero-banner__title {
+    font-size: 4rem;
+  }
+
+  .hero-banner .hero-banner__date {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero-banner .hero-banner__title {
+    font-size: 6rem;
+  }
+}
+
+/* Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaling {
+  from {
+    transform: scale(1.3);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}

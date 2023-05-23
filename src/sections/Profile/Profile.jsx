@@ -1,10 +1,13 @@
 import { Avatar } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import Title from '../components/Title'
+import Title from '../../components/Title';
+import Section from '../../components/Section';
+
+import './Profile.css'
 
 export default function Profile() {
     return (
-        <>
+        <Section className="profile">
             <Grid container>
                 <Grid xs={12}>
                     <Title title="Os noivos"></Title>
@@ -40,6 +43,6 @@ export default function Profile() {
                     </div>
                 </Grid>
             </Grid>
-        </>
+        </Section>
     )
 }
