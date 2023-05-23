@@ -10,6 +10,7 @@ import Title from '../../components/Title';
 export default function Timeline() {
     const timelineItems = [
         {
+            key: 1,
             title: "Nos conhecemos",
             date: "07/07/2017",
             children: (
@@ -21,6 +22,7 @@ export default function Timeline() {
             )
         },
         {
+            key: 2,
             title: "Começamos a morar juntos",
             date: "04/09/2021",
             children: (
@@ -32,6 +34,7 @@ export default function Timeline() {
             )
         },
         {
+            key: 3,
             title: "O pedido",
             date: "04/10/2022",
             children: (

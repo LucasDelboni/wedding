@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import Title from '../components/Title';
+import Title from '../../components/Title';
 import Box from '@mui/material/Box';
 import { CardMedia } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -20,7 +20,6 @@ export default function Gifts() {
                 src="pix-qr-code.png"
                 alt="pix qr code"
             />
-            <p>Pix copia e cola: {pix}</p>
             <Button variant="contained" onClick={copyToClipboard}>Copiar</Button>
             <p>E para te ajudar, aqui vai uma lista de coisas que queremos comprar</p>
             <Box sx={{ flexGrow: 1 }}>

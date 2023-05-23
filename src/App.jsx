@@ -11,7 +11,7 @@ import Profile from './sections/Profile';
 import Gifts from './sections/Gifts';
 import Section from './components/Section';
 import Comments from './sections/Comments'
-import Godparents from './sections/Godparents';
+import Bestmen from './sections/Bestmen';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
         <Countdown />
       </Section>
       <Section even>
-        <Godparents />
+        <Bestmen />
       </Section>
       <Section>
         <Cerimony />

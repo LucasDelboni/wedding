@@ -1,29 +1,33 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import Title from '../components/Title';
+import Title from '../../components/Title';
 import { Grid } from '@mui/material';
 
-export default function Godparents() {
+import './Bestmen.css'
+
+export default function Bestmen() {
     return (
         <>
             <Title title="Padrinhos e Madrinhas" />
             <Grid container>
                 {itemData.map((item) => (
-                    <Grid key={item.img} xs={6} md={3} >
+                    <Grid
+                        key={item.title}
+                        className="bestmen__frame"
+                        xs={6}
+                        sm={4}
+                        md={3}
+                    >
                         <img
                             src={`${item.img}?w=248&fit=crop&auto=format`}
                             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt={item.title}
                             loading="lazy"
-                            className='border_img'
+                            className="bestmen__image"
                         />
-                        <p>{item.title}</p>
+                        <p className="bestmen__name">{item.title}</p>
                     </Grid>
                 ))}
             </Grid>
-            <ImageList>
-                
-            </ImageList>
         </>
     );
 }

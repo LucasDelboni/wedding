@@ -1,8 +1,10 @@
 import { Button, FormControl, FormLabel, List, Paper, TextField, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
-import Title from "../components/Title";
+import Title from "../../components/Title";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
+import './Comments.css'
 
 export default function Comments() {
     const [name, setName] = useState('')
@@ -34,6 +36,7 @@ export default function Comments() {
             <Title title="Comentários"/>
             <div style={{display: 'block', textAlign: 'center'}}>
                 <img
+                    className="comments__logo"
                     src='casal.png'
                     srcSet='casal.png'
                     alt='Desenho que a Adrina fez do casal'
