@@ -7,7 +7,7 @@ export default function Section({ children, className, even }) {
             maxWidth="100%"
             component="section"
             className={className}
-            style={{ background: backgroundColor }}
+            style={{ backgroundColor: backgroundColor }}
             sx={{ paddingBottom: 6, paddingTop: 6 }}>
             {children}
         </Container>

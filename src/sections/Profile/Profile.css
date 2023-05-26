@@ -1,2 +1,48 @@
 .profile {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center calc(50% + 3rem);
+  background-size: 65%;
+}
+
+.profile .profile__avatar {
+  width: 276px;
+  height: 276px;
+  margin-bottom: 2rem;
+}
+
+.profile .profile__name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.profile .profile__and {
+  display: none;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 2.25rem;
+  font-size: 100px;
+  margin-bottom: 200px;
+  margin-left: -25px;
+  margin-right: -50px;
+}
+
+.profile .profile__surname {
+  font-family: 'Great Vibes', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: -0.75rem;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .profile .profile__and {
+    display: block;
+  }
+
+  .profile {
+    background-image: url("/public/profile/green-brush.png");
+  }
 }

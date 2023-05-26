@@ -1,21 +1,19 @@
 
 import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab';
-import { Box, Typography } from '@mui/material';
-
-import HeartIcon from '@mui/icons-material/Favorite';
+import { Box, Typography, Icon } from '@mui/material';
 
 import './TimelineItem.css'
 
-export default function TimelineItem({ title, date, children }) {
+export default function TimelineItem({ title, date, children, icon }) {
 
   return (
     <MuiTimelineItem className="timeline__item">
       <TimelineOppositeContent className="timeline__opposite-content">
         <Box className="timeline__opposite-text">
-          <Typography>
+          <Typography className="timeline__title">
             {title}
           </Typography>
-          <Typography>
+          <Typography className="timeline__date">
             {date}
           </Typography>
         </Box>
@@ -23,7 +21,7 @@ export default function TimelineItem({ title, date, children }) {
       <TimelineSeparator className="timeline__separator">
         <TimelineConnector />
         <TimelineDot className="timeline__dot">
-          <HeartIcon />
+          <Icon baseClassName="material-icons-two-tone">{icon}</Icon>
         </TimelineDot>
         <TimelineConnector />
       </TimelineSeparator>

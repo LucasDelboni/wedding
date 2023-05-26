@@ -26,10 +26,15 @@
   transform: translateX(-50%);
 }
 
+.hero-banner__and {
+  font-size: 1.75rem;
+  font-family: 'Playfair Display', sans-serif;
+}
+
 .hero-banner .hero-banner__title {
   color: #FCF9F7;
   font-family: 'Montaga', serif;
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 1;
   margin-bottom: 1.5rem;
   opacity: 0;
@@ -52,6 +57,10 @@
     font-size: 4rem;
   }
 
+  .hero-banner__and {
+    font-size: 3.5rem;
+  }
+
   .hero-banner .hero-banner__date {
     font-size: 1.5rem;
   }
@@ -60,6 +69,10 @@
 @media only screen and (min-width: 900px) {
   .hero-banner .hero-banner__title {
     font-size: 6rem;
+  }
+
+  .hero-banner__and {
+    font-size: 5rem;
   }
 }
 

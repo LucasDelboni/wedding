@@ -4,9 +4,35 @@
 }
 
 .timeline__image {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.proposal .proposal__title {
+  font-size: 2rem;
+  line-height: 1;
+  font-family: 'Great Vibes', sans-serif;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+.proposal .proposal__date {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.proposal .proposal__video {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 768px;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (min-width: 600px) {
