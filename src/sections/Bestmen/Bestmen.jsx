@@ -16,6 +16,7 @@ export default function Bestmen() {
                         xs={6}
                         sm={4}
                         md={3}
+                        item
                     >
                         <img
                             src={`${item.img}?w=248&fit=crop&auto=format`}

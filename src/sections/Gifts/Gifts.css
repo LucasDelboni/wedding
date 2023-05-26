@@ -1,0 +1,33 @@
+.gifts .gifts__desc {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.gifts .gifts__pix {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 0.5rem;
+}
+
+.gifts .gifts__pix-button {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+.gift-card__desc {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gift-card__price {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  font-family: 'Roboto', sans-serif;
+}

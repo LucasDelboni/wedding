@@ -1,13 +1,13 @@
 import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import Timeline from './sections/Timeline';
-import Countdown from './sections/Countdown/Countdown';
+import Countdown from './sections/Countdown';
 import Cerimony from './sections/Cerimony';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import Profile from './sections/Profile/Profile';
+import Profile from './sections/Profile';
 import Gifts from './sections/Gifts';
 import Section from './components/Section';
 import Comments from './sections/Comments'
@@ -32,9 +32,7 @@ function App() {
       <Section>
         <Cerimony />
       </Section>
-      <Section even>
-        <Gifts />
-      </Section>
+      <Gifts />
       <Section>
         <Comments />
       </Section>

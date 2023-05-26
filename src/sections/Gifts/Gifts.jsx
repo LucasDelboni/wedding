@@ -1,10 +1,13 @@
 import Button from '@mui/material/Button';
 import Title from '../../components/Title';
 import Box from '@mui/material/Box';
-import { CardMedia } from '@mui/material';
+import { CardMedia, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+
+import './Gifts.css'
+import Section from '../../components/Section';
 
 export default function Gifts() {
     const pix = '00020101021126580014br.gov.bcb.pix013604d64d51-72a6-436c-b97c-e5bd88a326aa5204000053039865802BR5919Lucas covre Delboni6009SAO PAULO622905251FC4P0HBRRVBGJR6MD47JA99V63042FF9';
@@ -13,15 +16,20 @@ export default function Gifts() {
     }
 
     return (
-        <>
+        <Section className="gifts" even>
             <Title title='Lista de presentes' />
-            <p>Para nos presentear, basta nos enviar um <b>Pix</b> de qualquer valor para:</p>
+            <Typography className="gifts__desc">
+                Para nos presentear, basta nos enviar um <b>Pix</b> de qualquer valor para:
+            </Typography>
             <img
                 src="pix-qr-code.png"
                 alt="pix qr code"
+                className="gifts__pix"
             />
-            <Button variant="contained" onClick={copyToClipboard}>Copiar</Button>
-            <p>E para te ajudar, aqui vai uma lista de coisas que queremos comprar</p>
+            <Button className="gifts__pix-button" variant="contained" onClick={copyToClipboard}>Copiar</Button>
+            <Typography className="gifts__desc">
+                E para te ajudar, aqui vai uma lista de coisas que queremos comprar
+            </Typography>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <GiftCard
@@ -80,7 +88,7 @@ export default function Gifts() {
                     />
                 </Grid>
             </Box>
-        </>
+        </Section>
     );
 }
 
@@ -103,10 +111,10 @@ function GiftCard({ src, alt, description, price }) {
                     image={src}
                     alt="green iguana"
                 />
-                <p gutterBottom variant="h5" component="div">
+                <p className="gift-card__desc" gutterBottom variant="h5" component="div">
                     {description}
                 </p>
-                <p variant="body2" color="text.secondary">
+                <p className="gift-card__price" variant="body2" color="text.secondary">
                     R$: {price}
                 </p>
             </Item>

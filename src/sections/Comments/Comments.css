@@ -1,3 +1,55 @@
 .comments__logo {
   max-width: 50vw;
 }
+
+.comment {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment .comment__title {
+  margin-bottom: 0.5rem;
+}
+
+.comment .comment__author {
+  color: #2B1105;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.comment .comment__date {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding-left: 0.25rem;
+  display: inline-block;
+}
+
+.comment .comment__text {
+  font-size: 1.375rem;
+  font-family: 'Great Vibes', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.form-comments {
+  padding: 1rem;
+}
+
+.form-comments .form-comments__title {
+  color: #2B1105;
+  font-family: "Montaga", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-comments .form-comments__label {
+  color: #2B1105;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}

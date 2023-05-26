@@ -1,6 +1,8 @@
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Card, CardContent } from "@mui/material";
-import Title from '../components/Title';
+import Title from '../../components/Title';
+
+import './Cerimony.css'
 
 export default function Cerimony() {
 
@@ -31,11 +33,11 @@ export default function Cerimony() {
 
 function EventCard({ title, name, address, url }) {
   return (
-    <Card>
+    <Card className="event-card">
       <CardContent>
-        <h3>{title}</h3>
-        <p>{name}</p>
-        <p>{address}</p>
+        <h3 className="event-card__title">{title}</h3>
+        <p className="event-card__text">{name}</p>
+        <p className="event-card__text">{address}</p>
         <AddressMap className='margin-box'
           title={name}
           url={url}

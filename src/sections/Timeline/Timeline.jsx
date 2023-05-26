@@ -52,7 +52,7 @@ export default function Timeline() {
             <MuiTimeline className='timeline' position="alternate">
                 {timelineItems.map(timelineItem => (<TimelineItem {...timelineItem} />))}
             </MuiTimeline>
-            <Box class="proposal">
+            <Box className="proposal">
                 <Typography className="proposal__title">
                     <AutoAwesomeIcon />
                     {` O pedido `}

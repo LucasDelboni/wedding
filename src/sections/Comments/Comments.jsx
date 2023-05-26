@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, List, Paper, TextField, Typography } from "@mui/material";
+import { Box, Button, FormControl, FormLabel, List, Paper, TextField, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
@@ -13,14 +13,14 @@ export default function Comments() {
 
     useEffect(() => {
         fetch('comments.json').then(commentsData => [
-            commentsData.json().then(oldComments => 
+            commentsData.json().then(oldComments =>
                 setAllComents(oldComments)
             )
         ])
 
     }, [])
 
-    function handleSubmit (event) {
+    function handleSubmit(event) {
         event.preventDefault()
         axios.post('https://couve.laury.dev/v2/entry/LucasDelboni/wedding/main/comments', {
             fields: {
@@ -28,13 +28,13 @@ export default function Comments() {
                 message: message,
             }
         })
-        setAllComents(allComents.concat([{name, message, date: new Date()}]))
+        setAllComents(allComents.concat([{ name, message, date: new Date() }]))
     }
 
     return (
         <>
-            <Title title="Comentários"/>
-            <div style={{display: 'block', textAlign: 'center'}}>
+            <Title title="Comentários" />
+            <div style={{ display: 'block', textAlign: 'center' }}>
                 <img
                     className="comments__logo"
                     src='casal.png'
@@ -43,62 +43,76 @@ export default function Comments() {
                     loading="lazy"
                 />
             </div>
-            <List>
+            <List sx={{ marginBottom: "4rem" }}>
                 {allComents
                     .sort((a, b) => a.date - b.date)
-                    .map(comment => 
-                        <Comment name={comment.name} date={new Date(comment.date)} message={comment.message} key={comment.date+comment.name}/>
+                    .map(comment =>
+                        <Comment
+                            key={comment.date + comment.name}
+                            name={comment.name}
+                            date={new Date(comment.date)}
+                            message={comment.message}
+                        />
                     )}
             </List>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <FormControl fullWidth sx={{ m: 1 }}>
-                    <FormLabel>Nome</FormLabel>
-                    <TextField
-                        required
-                        id="name"
-                        label="Fernando Pessoa"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
-                    />
-                    <FormLabel>Comentário</FormLabel>
-                    <TextField
-                        required
-                        id="message"
-                        label="Parabéns!"
-                        multiline
-                        rows={4}
-                        value={message}
-                        onChange={e => setMessage(e.target.value)}
-                    />
-                    <Button variant="contained" endIcon={<SendIcon />} onClick={handleSubmit}>
-                        Enviar
-                    </Button>
-                </FormControl>
-            </form>
+            <Paper className="form-comments" elevation={3}>
+                <Typography className="form-comments__title" component="h3">
+                    Deixe seu recado
+                </Typography>
+                <form autoComplete="off" onSubmit={handleSubmit}>
+                    <FormControl fullWidth>
+                        <FormLabel className="form-comments__label">Nome</FormLabel>
+                        <TextField
+                            required
+                            id="name"
+                            label="Fernando Pessoa"
+                            value={name}
+                            minLe
+                            onChange={e => setName(e.target.value)}
+                            sx={{ marginBottom: '2rem' }}
+                            inputProps={{ minLength: 3 }}
+                        />
+                        <FormLabel className="form-comments__label">Comentário</FormLabel>
+                        <TextField
+                            required
+                            id="message"
+                            label="Parabéns!"
+                            multiline
+                            rows={4}
+                            value={message}
+                            sx={{ marginBottom: '2rem' }}
+                            onChange={e => setMessage(e.target.value)}
+                        />
+                        <Button variant="contained" endIcon={<SendIcon />} onClick={handleSubmit}>
+                            Enviar
+                        </Button>
+                    </FormControl>
+                </form>
+            </Paper>
         </>
     )
 }
 
 function Comment({ name, message, date }) {
-    const day = (date.getDate()+'').length === 1 ? '0'+date.getDate() : date.getDate()
-    const month = (date.getMonth()+'').length === 1 ? '0'+(date.getMonth()+1): date.getMonth()+1
+    const day = (date.getDate() + '').length === 1 ? '0' + date.getDate() : date.getDate()
+    const month = (date.getMonth() + '').length === 1 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1
     const year = date.getFullYear()
 
     return (
-        <Paper elevation={3} style={{marginBottom: '1%'}}>
-            <div style={{margin: '1%'}}>
-                <Typography style={{display: 'inline-block'}} variant="h6" component="div">
+        <Paper className="comment" elevation={3}>
+            <Box className="comment__title">
+                <Typography className="comment__author" component="h3">
                     {name}
                 </Typography>
-                <Typography style={{display: 'inline-block', marginLeft: '5px'}} sx={{ mb: 1 }} color="text.secondary">
-                    {`${day}/${month}/${year}`}
+                <Typography className="comment__date">
+                    {` - ${day}/${month}/${year}`}
                 </Typography>
-            </div>
-            <div style={{marginLeft: '2%', marginRight: '2%'}}>
-                <Typography variant="body2" style={{whiteSpace: 'pre-wrap'}}>
+            </Box>
+            <Box className="comment__text-container">
+                <Typography className="comment__text">
                     {message}
                 </Typography>
-            </div>
+            </Box>
         </Paper>
     )
 }
