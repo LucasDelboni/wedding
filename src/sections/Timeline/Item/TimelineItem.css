@@ -70,6 +70,16 @@
     font-size: 1.75rem;
   }
 
+  .timeline .timeline__content {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .timeline .timeline__opposite-content {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
   .timeline .timeline__item:nth-child(odd) .timeline__opposite-content {
     padding-right: 2rem;
   }
