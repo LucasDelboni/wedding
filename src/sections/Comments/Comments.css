@@ -12,9 +12,10 @@
 }
 
 .comment .comment__author {
-  color: #2B1105;
+  color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  font-size: 1.25rem;
   display: inline-block;
 }
 
@@ -28,8 +29,9 @@
 
 .comment .comment__text {
   font-size: 1.375rem;
-  font-family: 'Great Vibes', sans-serif;
+  font-family: var(--cursive-font);
   font-weight: 300;
+  line-height: 1.5;
   display: inline-block;
   white-space: pre-wrap;
 }
@@ -39,15 +41,15 @@
 }
 
 .form-comments .form-comments__title {
-  color: #2B1105;
+  color: var(--primary-color);
   font-family: "Montaga", serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 500;
 }
 
 .form-comments .form-comments__label {
-  color: #2B1105;
+  color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 400;

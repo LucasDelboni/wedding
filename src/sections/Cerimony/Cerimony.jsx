@@ -3,6 +3,7 @@ import { Card, CardContent } from "@mui/material";
 import Title from '../../components/Title';
 
 import './Cerimony.css'
+import FadeInText from '../../components/FadeInText';
 
 export default function Cerimony() {
 
@@ -35,9 +36,11 @@ function EventCard({ title, name, address, url }) {
   return (
     <Card className="event-card">
       <CardContent>
-        <h3 className="event-card__title">{title}</h3>
-        <p className="event-card__text">{name}</p>
-        <p className="event-card__text">{address}</p>
+        <FadeInText component="h3" className="event-card__title">
+          {title}
+        </FadeInText>
+        <FadeInText className="event-card__text">{name}</FadeInText>
+        <FadeInText className="event-card__text">{address}</FadeInText>
         <AddressMap className='margin-box'
           title={name}
           url={url}

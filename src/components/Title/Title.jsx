@@ -1,7 +1,11 @@
+import FadeInText from '../FadeInText'
+
 import './Title.css'
 
 export default function Title({ title }) {
     return (
-        <h2 className="title">{title}</h2>
+        <FadeInText component="h2" className="title">
+            {title}
+        </FadeInText>
     )
 }

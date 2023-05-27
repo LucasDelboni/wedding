@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import './HeroBanner.css'
+import FadeInText from '../../components/FadeInText';
 
 export default function HeroBanner() {
 
@@ -8,12 +9,15 @@ export default function HeroBanner() {
     <Box component="section" className="hero-banner">
       <Box className="hero-banner__image" />
       <Box className="hero-banner__text">
-        <Typography variant="h1" className="hero-banner__title">
-          Adriana <span className="hero-banner__and">&</span> Lucas
-        </Typography>
-        <Typography className="hero-banner__date">
+        <FadeInText
+          component="h1"
+          className="hero-banner__title"
+        >
+          Adriana & Lucas
+        </FadeInText>
+        <FadeInText className="hero-banner__date" delay="1">
           07 de outubro de 2023 - São Paulo
-        </Typography>
+        </FadeInText>
       </Box>
     </Box>
   );

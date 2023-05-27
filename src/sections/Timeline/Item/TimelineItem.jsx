@@ -1,21 +1,22 @@
 
 import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab';
-import { Box, Typography, Icon } from '@mui/material';
+import { Box, Icon } from '@mui/material';
 
 import './TimelineItem.css'
+import RevelingText from '../../../components/RevelingText';
 
-export default function TimelineItem({ title, date, children, icon }) {
+export default function TimelineItem({ title, date, children, icon, speed }) {
 
   return (
     <MuiTimelineItem className="timeline__item">
       <TimelineOppositeContent className="timeline__opposite-content">
         <Box className="timeline__opposite-text">
-          <Typography className="timeline__title">
+          <RevelingText className="timeline__title">
             {title}
-          </Typography>
-          <Typography className="timeline__date">
+          </RevelingText>
+          <RevelingText className="timeline__date">
             {date}
-          </Typography>
+          </RevelingText>
         </Box>
       </TimelineOppositeContent>
       <TimelineSeparator className="timeline__separator">

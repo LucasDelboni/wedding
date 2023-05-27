@@ -1,5 +1,5 @@
 .event-card__title {
-  color: #2B1105;
+  color: var(--primary-color);
   font-family: "Montaga", serif;
   font-size: 2rem;
   font-weight: 500;

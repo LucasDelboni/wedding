@@ -35,10 +35,9 @@
   color: #FCF9F7;
   font-family: 'Montaga', serif;
   font-size: 2.75rem;
+  font-weight: 300;
   line-height: 1;
   margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fade-in 1s 0s ease-in forwards;
 }
 
 .hero-banner .hero-banner__date {
@@ -47,8 +46,7 @@
   font-size: 1rem;
   font-weight: 200;
   line-height: 1;
-  opacity: 0;
-  animation: fade-in 1s 1s ease-in forwards;
+  margin: 0;
 }
 
 /* Media queries */
@@ -73,17 +71,6 @@
 
   .hero-banner__and {
     font-size: 5rem;
-  }
-}
-
-/* Animation */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 

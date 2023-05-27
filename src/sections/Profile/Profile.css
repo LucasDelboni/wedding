@@ -30,7 +30,7 @@
 }
 
 .profile .profile__surname {
-  font-family: 'Great Vibes', sans-serif;
+  font-family: var(--cursive-font);
   font-size: 3rem;
   text-align: center;
   margin-top: -0.75rem;

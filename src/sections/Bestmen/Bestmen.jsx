@@ -3,6 +3,7 @@ import Title from '../../components/Title';
 import { Grid } from '@mui/material';
 
 import './Bestmen.css'
+import FadeInText from '../../components/FadeInText';
 
 export default function Bestmen() {
     return (
@@ -25,7 +26,9 @@ export default function Bestmen() {
                             loading="lazy"
                             className="bestmen__image"
                         />
-                        <p className="bestmen__name">{item.title}</p>
+                        <FadeInText className="bestmen__name">
+                            {item.title}
+                        </FadeInText>
                     </Grid>
                 ))}
             </Grid>

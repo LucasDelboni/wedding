@@ -1,10 +1,12 @@
-import { Box, Button, FormControl, FormLabel, List, Paper, TextField, Typography } from "@mui/material";
+import { Box, Button, FormControl, FormLabel, List, Paper, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 import './Comments.css'
+import FadeInText from '../../components/FadeInText';
+import RevelingText from '../../components/RevelingText';
 
 export default function Comments() {
     const [name, setName] = useState('')
@@ -56,9 +58,9 @@ export default function Comments() {
                     )}
             </List>
             <Paper className="form-comments" elevation={3}>
-                <Typography className="form-comments__title" component="h3">
+                <FadeInText component="h3" className="form-comments__title">
                     Deixe seu recado
-                </Typography>
+                </FadeInText>
                 <form autoComplete="off" onSubmit={handleSubmit}>
                     <FormControl fullWidth>
                         <FormLabel className="form-comments__label">Nome</FormLabel>
@@ -101,17 +103,17 @@ function Comment({ name, message, date }) {
     return (
         <Paper className="comment" elevation={3}>
             <Box className="comment__title">
-                <Typography className="comment__author" component="h3">
+                <FadeInText component="h3" className="comment__author">
                     {name}
-                </Typography>
-                <Typography className="comment__date">
+                </FadeInText>
+                <FadeInText component="h3" className="comment__date">
                     {` - ${day}/${month}/${year}`}
-                </Typography>
+                </FadeInText>
             </Box>
             <Box className="comment__text-container">
-                <Typography className="comment__text">
+                <RevelingText className="comment__text" speed="fast">
                     {message}
-                </Typography>
+                </RevelingText>
             </Box>
         </Paper>
     )

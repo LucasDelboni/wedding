@@ -8,11 +8,13 @@
 
 .timeline .timeline__item:nth-child(odd) .timeline__opposite-content {
   align-items: flex-end;
+  padding-right: 0.5rem;
   padding-left: 0;
 }
 
 .timeline .timeline__item:nth-child(even) .timeline__opposite-content {
   align-items: flex-start;
+  padding-left: 0.5rem;
   padding-right: 0;
 }
 
@@ -26,11 +28,13 @@
 
 .timeline .timeline__item:nth-child(odd) .timeline__content {
   align-items: flex-start;
+  padding-left: 0.5rem;
   padding-right: 0;
 }
 
 .timeline .timeline__item:nth-child(even) .timeline__content {
   align-items: flex-end;
+  padding-right: 0.5rem;
   padding-left: 0;
 }
 
@@ -48,7 +52,7 @@
 .timeline .timeline__title {
   font-size: 1.5rem;
   line-height: 1;
-  font-family: 'Great Vibes', sans-serif;
+  font-family: var(--cursive-font);
   margin-bottom: 0.5rem;
 }
 
@@ -57,4 +61,28 @@
   font-weight: 300;
   line-height: 1;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .timeline .timeline__title {
+    font-size: 1.75rem;
+  }
+
+  .timeline .timeline__item:nth-child(odd) .timeline__opposite-content {
+    padding-right: 2rem;
+  }
+  
+  .timeline .timeline__item:nth-child(even) .timeline__opposite-content {
+    padding-left: 2rem;
+  }
+
+  .timeline .timeline__item:nth-child(odd) .timeline__content {
+    padding-left: 2rem;
+  }
+  
+  .timeline .timeline__item:nth-child(even) .timeline__content {
+    padding-right: 2rem;
+  }
 }

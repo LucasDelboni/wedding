@@ -1,3 +1,9 @@
+:root {
+  --cursive-font: 'Great Vibes', sans-serif;
+  --primary-color: #2B1105;
+  --secondary-font: 'Roboto', sans-serif;
+}
+
 html,
 body,
 #root {
@@ -6,62 +12,6 @@ body,
   overflow-x: hidden;
 }
 
-h1 {
+p, h3 {
   margin: 0;
-  font-family: 'Great Vibes', cursive;
-  font-size: 3em;
-  font-weight: 500;
-}
-
-h2 {
-  margin-bottom: 8%;
-  font-size: 3em;
-  font-weight: 500;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.photo-text {
-  display: flex;
-  justify-content: space-around;
-  text-align: justify;
-}
-
-.margin-box {
-  margin-bottom: 10%;
-}
-
-
-.photo-text {
-  display: flex;
-  justify-content: space-around;
-  text-align: justify;
-}
-
-.circle_text {
-  padding-top: 10px;
-  font-weight: bold;
 }

@@ -9,6 +9,8 @@ import { Box, Typography } from '@mui/material';
 
 
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import RevelingText from '../../components/RevelingText';
+import FadeInText from '../../components/FadeInText';
 
 const timelineItems = [
     {
@@ -54,13 +56,17 @@ export default function Timeline() {
             </MuiTimeline>
             <Box className="proposal">
                 <Typography className="proposal__title">
-                    <AutoAwesomeIcon />
-                    {` O pedido `}
-                    <AutoAwesomeIcon />
+                    <FadeInText component="span">
+                        <AutoAwesomeIcon />
+                    </FadeInText>
+                    <RevelingText component="span">{` O pedido `}</RevelingText>
+                    <FadeInText component="span">
+                        <AutoAwesomeIcon />
+                    </FadeInText>
                 </Typography>
-                <Typography className="proposal__date">
+                <RevelingText className="proposal__date">
                     04/10/2022
-                </Typography>
+                </RevelingText>
                 <video className='proposal__video' controls>
                     <source src="timeline/pedido.mp4" type="video/mp4" />
                     Your browser does not support the video tag.

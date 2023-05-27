@@ -1,7 +1,8 @@
-import { Avatar, Typography } from '@mui/material';
+import { Avatar } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Title from '../../components/Title';
 import Section from '../../components/Section';
+import FadeInText from '../../components/FadeInText';
 
 import './Profile.css'
 
@@ -15,29 +16,29 @@ export default function Profile() {
                         className="profile__avatar"
                         src="profile/lucas-profile.jpg"
                     />
-                    <Typography className="profile__name">
+                    <FadeInText className="profile__name">
                         Lucas
-                    </Typography>
-                    <Typography className="profile__surname">
+                    </FadeInText>
+                    <FadeInText className="profile__surname">
                         Delboni
-                    </Typography>
+                    </FadeInText>
                 </Grid>
                 <Grid item xs="auto" padding={0} display="flex" alignItems="center">
-                    <Typography className="profile__and">
+                    <FadeInText className="profile__and">
                         &
-                    </Typography>
+                    </FadeInText>
                 </Grid>
                 <Grid item xs="auto">
                     <Avatar
                         className="profile__avatar"
                         src="profile/adriana-profile.jpg"
                     />
-                    <Typography className="profile__name">
+                    <FadeInText className="profile__name">
                         Adriana
-                    </Typography>
-                    <Typography className="profile__surname">
+                    </FadeInText>
+                    <FadeInText className="profile__surname">
                         Oliveira
-                    </Typography>
+                    </FadeInText>
                 </Grid>
             </Grid>
         </Section>
