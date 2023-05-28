@@ -15,7 +15,7 @@ export default function Profile() {
                 <Grid item xs="auto">
                     <FadeInImage
                         className="profile__avatar"
-                        src="profile/lucas-profile.jpg"
+                        src="profile/lucas-profile2.jpg"
                     />
                     <FadeInText className="profile__name">
                         Lucas
@@ -32,7 +32,7 @@ export default function Profile() {
                 <Grid item xs="auto">
                     <FadeInImage
                         className="profile__avatar"
-                        src="profile/adriana-profile.jpg"
+                        src="profile/adriana-profile2.jpg"
                     />
                     <FadeInText className="profile__name">
                         Adriana

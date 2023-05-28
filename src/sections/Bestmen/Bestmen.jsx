@@ -38,19 +38,19 @@ export default function Bestmen() {
 
 const itemData = [
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/laury2.jpg',
         title: 'Laury',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/daniela2.jpg',
         title: 'Daniela',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/pedro2.jpg',
         title: 'Pedro',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/lucas2.jpg',
         title: 'Lucas',
     },
     {
@@ -62,11 +62,11 @@ const itemData = [
         title: 'Bruno',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/thais2.jpg',
         title: 'Thais',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/julio2.jpg',
         title: 'Julio',
     },
     {
@@ -94,7 +94,7 @@ const itemData = [
         title: 'Ana',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/matheus2.jpg',
         title: 'Matheus',
     },
     {
