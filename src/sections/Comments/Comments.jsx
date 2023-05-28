@@ -34,6 +34,10 @@ export default function Comments() {
         setAllComents(allComents.concat([{ name, message, date: new Date() }]))
     }
 
+    function isValidComment() {
+        return name.length > 2 && message.length > 5
+    }
+
     return (
         <>
             <Title title="Comentários" />
@@ -68,7 +72,7 @@ export default function Comments() {
                         <TextField
                             required
                             id="name"
-                            label="Fernando Pessoa"
+                            label="Nome"
                             value={name}
                             minLe
                             onChange={e => setName(e.target.value)}
@@ -79,7 +83,7 @@ export default function Comments() {
                         <TextField
                             required
                             id="message"
-                            label="Parabéns!"
+                            label="Comentário!"
                             multiline
                             rows={4}
                             value={message}
@@ -91,6 +95,7 @@ export default function Comments() {
                             endIcon={<SendIcon />}
                             onClick={handleSubmit}
                             sx={{ color: 'white' }}
+                            disabled={!isValidComment()}
                         >
                             Enviar
                         </Button>
