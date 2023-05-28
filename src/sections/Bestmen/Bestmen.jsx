@@ -98,7 +98,7 @@ const itemData = [
         title: 'Matheus',
     },
     {
-        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        img: 'bestmen/denis2.jpg',
         title: 'Denis',
     }
 ];
