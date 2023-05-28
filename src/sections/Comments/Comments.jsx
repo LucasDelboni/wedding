@@ -57,7 +57,7 @@ export default function Comments() {
                         <Comment
                             key={comment.date + comment.name}
                             name={comment.name}
-                            date={new Date(comment.date)}
+                            date={new Date(comment.date * 1000)}
                             message={comment.message}
                         />
                     )}
