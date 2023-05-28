@@ -13,7 +13,7 @@ import ImageModal from '../../components/ImageModal';
 import FadeInImage from '../../components/FadeInImage';
 
 export default function Gifts() {
-    const pix = '00020101021126580014br.gov.bcb.pix013604d64d51-72a6-436c-b97c-e5bd88a326aa5204000053039865802BR5919Lucas covre Delboni6009SAO PAULO622905251FC4P0HBRRVBGJR6MD47JA99V63042FF9';
+    const pix = 'casoriolucaseadriana@gmail.com';
     function copyToClipboard() {
         navigator.clipboard.writeText(pix);
     }
@@ -29,6 +29,9 @@ export default function Gifts() {
                 alt="pix qr code"
                 className="gifts__pix"
             />
+            <FadeInText className="gifts__desc">
+                Ou email <b>{pix}</b>
+            </FadeInText>
             <Button 
                 className="gifts__pix-button"
                 variant="contained"
