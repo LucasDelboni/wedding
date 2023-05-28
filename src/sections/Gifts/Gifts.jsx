@@ -50,28 +50,28 @@ export default function Gifts() {
                         price="3.500,00"
                     />
                     <GiftCard
-                        src="gifts/computer.webp"
-                        alt="Computador gamer"
-                        description="Computador gamer com LEDs"
-                        price="7.000,00"
-                    />
-                    <GiftCard
                         src="gifts/air-fryer.jpg"
                         alt="Air fryer"
                         description="Air fryer"
                         price="700,00"
                     />
                     <GiftCard
-                        src="gifts/travel.webp"
-                        alt="Mapa mundi"
-                        description="Viagem internacional"
-                        price="15.000,00"
+                        src="gifts/computer.webp"
+                        alt="Computador gamer"
+                        description="Computador gamer com LEDs"
+                        price="7.000,00"
                     />
                     <GiftCard
                         src="gifts/lunch.jpg"
                         alt="Vista do terraço italia"
                         description="Jantar no terraço italia"
                         price="360,00"
+                    />
+                    <GiftCard
+                        src="gifts/travel.webp"
+                        alt="Mapa mundi"
+                        description="Viagem internacional"
+                        price="15.000,00"
                     />
                     <GiftCard
                         src="gifts/cake-mixer.webp"
