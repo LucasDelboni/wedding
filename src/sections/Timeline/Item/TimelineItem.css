@@ -83,7 +83,7 @@
   .timeline .timeline__item:nth-child(odd) .timeline__opposite-content {
     padding-right: 2rem;
   }
-  
+
   .timeline .timeline__item:nth-child(even) .timeline__opposite-content {
     padding-left: 2rem;
   }
@@ -91,7 +91,7 @@
   .timeline .timeline__item:nth-child(odd) .timeline__content {
     padding-left: 2rem;
   }
-  
+
   .timeline .timeline__item:nth-child(even) .timeline__content {
     padding-right: 2rem;
   }

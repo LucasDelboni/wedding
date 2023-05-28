@@ -1,10 +1,11 @@
-import { Avatar } from '@mui/material';
+import './Profile.css'
+
 import Grid from '@mui/material/Unstable_Grid2';
 import Title from '../../components/Title';
 import Section from '../../components/Section';
 import FadeInText from '../../components/FadeInText';
+import FadeInImage from '../../components/FadeInImage';
 
-import './Profile.css'
 
 export default function Profile() {
     return (
@@ -12,7 +13,7 @@ export default function Profile() {
             <Title title="Os noivos" />
             <Grid container justifyContent="center" columnSpacing={25}>
                 <Grid item xs="auto">
-                    <Avatar
+                    <FadeInImage
                         className="profile__avatar"
                         src="profile/lucas-profile.jpg"
                     />
@@ -29,7 +30,7 @@ export default function Profile() {
                     </FadeInText>
                 </Grid>
                 <Grid item xs="auto">
-                    <Avatar
+                    <FadeInImage
                         className="profile__avatar"
                         src="profile/adriana-profile.jpg"
                     />

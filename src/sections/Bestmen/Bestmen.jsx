@@ -4,6 +4,7 @@ import { Grid } from '@mui/material';
 
 import './Bestmen.css'
 import FadeInText from '../../components/FadeInText';
+import FadeInImage from '../../components/FadeInImage';
 
 export default function Bestmen() {
     return (
@@ -19,9 +20,8 @@ export default function Bestmen() {
                         md={3}
                         item
                     >
-                        <img
+                        <FadeInImage
                             src={`${item.img}?w=248&fit=crop&auto=format`}
-                            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt={item.title}
                             loading="lazy"
                             className="bestmen__image"

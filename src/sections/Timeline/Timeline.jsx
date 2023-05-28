@@ -11,6 +11,7 @@ import { Box, Typography } from '@mui/material';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import RevelingText from '../../components/RevelingText';
 import FadeInText from '../../components/FadeInText';
+import ImageModal from '../../components/ImageModal';
 
 const timelineItems = [
     {
@@ -19,7 +20,7 @@ const timelineItems = [
         title: "Nos conhecemos",
         date: "07/07/2017",
         children: (
-            <img
+            <ImageModal
                 alt="Nos conhecemos"
                 className="timeline__image"
                 src="timeline/nos-conhecemos.jpg"
@@ -32,7 +33,7 @@ const timelineItems = [
         title: "Começamos a morar juntos",
         date: "04/09/2021",
         children: (
-            <img
+            <ImageModal
                 alt="Começamos a morar juntos"
                 className="timeline__image"
                 src="timeline/morar-juntos.jpg"

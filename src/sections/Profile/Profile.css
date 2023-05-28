@@ -7,9 +7,11 @@
 }
 
 .profile .profile__avatar {
-  width: 276px;
+  border-radius: 50%;
   height: 276px;
   margin-bottom: 2rem;
+  object-fit: cover;
+  width: 276px;
 }
 
 .profile .profile__name {

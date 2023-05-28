@@ -13,10 +13,17 @@ import Section from './components/Section';
 import Comments from './sections/Comments'
 import Bestmen from './sections/Bestmen';
 import HeroBanner from './sections/HeroBanner';
+import { ThemeProvider, createTheme } from '@mui/material';
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: { main: '#93AAA5' },
+    },
+  });
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <HeroBanner />
       <Profile />
@@ -36,7 +43,7 @@ function App() {
       <Section>
         <Comments />
       </Section>
-    </>
+    </ThemeProvider>
   );
 }
 

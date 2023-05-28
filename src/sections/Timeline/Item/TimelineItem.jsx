@@ -1,11 +1,13 @@
 
 import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab';
-import { Box, Icon } from '@mui/material';
+import { Box, Icon, useMediaQuery } from '@mui/material';
 
 import './TimelineItem.css'
 import RevelingText from '../../../components/RevelingText';
 
 export default function TimelineItem({ title, date, children, icon, speed }) {
+
+  const matches = useMediaQuery('(min-width:900px)')
 
   return (
     <MuiTimelineItem className="timeline__item">
@@ -22,7 +24,7 @@ export default function TimelineItem({ title, date, children, icon, speed }) {
       <TimelineSeparator className="timeline__separator">
         <TimelineConnector />
         <TimelineDot className="timeline__dot">
-          <Icon baseClassName="material-icons-two-tone">{icon}</Icon>
+          <Icon baseClassName="material-icons-two-tone" sx={{ fontSize: matches ? '1.75rem' : '1.5rem' }}>{icon}</Icon>
         </TimelineDot>
         <TimelineConnector />
       </TimelineSeparator>

@@ -14,8 +14,15 @@
 }
 
 .gifts .gifts__pix-button {
+  color: white;
   display: block;
   margin: 0 auto 2rem;
+}
+
+.gift-card__img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;  
 }
 
 .gift-card__desc {

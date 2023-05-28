@@ -7,6 +7,7 @@ import axios from "axios";
 import './Comments.css'
 import FadeInText from '../../components/FadeInText';
 import RevelingText from '../../components/RevelingText';
+import FadeInImage from '../../components/FadeInImage';
 
 export default function Comments() {
     const [name, setName] = useState('')
@@ -37,7 +38,7 @@ export default function Comments() {
         <>
             <Title title="Comentários" />
             <div style={{ display: 'block', textAlign: 'center' }}>
-                <img
+                <FadeInImage
                     className="comments__logo"
                     src='casal.png'
                     srcSet='casal.png'
@@ -85,7 +86,12 @@ export default function Comments() {
                             sx={{ marginBottom: '2rem' }}
                             onChange={e => setMessage(e.target.value)}
                         />
-                        <Button variant="contained" endIcon={<SendIcon />} onClick={handleSubmit}>
+                        <Button
+                            variant="contained"
+                            endIcon={<SendIcon />}
+                            onClick={handleSubmit}
+                            sx={{ color: 'white' }}
+                        >
                             Enviar
                         </Button>
                     </FormControl>

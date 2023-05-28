@@ -9,6 +9,8 @@ import Grid from '@mui/material/Grid';
 import './Gifts.css'
 import Section from '../../components/Section';
 import FadeInText from '../../components/FadeInText';
+import ImageModal from '../../components/ImageModal';
+import FadeInImage from '../../components/FadeInImage';
 
 export default function Gifts() {
     const pix = '00020101021126580014br.gov.bcb.pix013604d64d51-72a6-436c-b97c-e5bd88a326aa5204000053039865802BR5919Lucas covre Delboni6009SAO PAULO622905251FC4P0HBRRVBGJR6MD47JA99V63042FF9';
@@ -22,12 +24,17 @@ export default function Gifts() {
             <FadeInText className="gifts__desc">
                 Para nos presentear, basta nos enviar um <b>Pix</b> de qualquer valor para:
             </FadeInText>
-            <img
+            <FadeInImage
                 src="pix-qr-code.png"
                 alt="pix qr code"
                 className="gifts__pix"
             />
-            <Button className="gifts__pix-button" variant="contained" onClick={copyToClipboard}>Copiar</Button>
+            <Button 
+                className="gifts__pix-button"
+                variant="contained"
+                onClick={copyToClipboard}>
+                Copiar
+            </Button>
             <FadeInText className="gifts__desc">
                 E para te ajudar, aqui vai uma lista de coisas que queremos comprar
             </FadeInText>
@@ -84,7 +91,9 @@ export default function Gifts() {
                     <GiftCard
                         src="gifts/vinho.webp"
                         alt="Vinho 3 medallas rose"
+                        secretAlt="Laury, me passa o vinho?"
                         description="Vinho 3 medallas rose"
+                        hasZoom
                         price="40,00"
                     />
                 </Grid>
@@ -102,16 +111,18 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-function GiftCard({ src, alt, description, price }) {
+function GiftCard({ src, alt, secretAlt, hasZoom, description, price }) {
+    const ImageCard = () => hasZoom
+        ? <ImageModal className="gift-card__img" src={src} alt={secretAlt || alt} />
+        : <FadeInImage className="gift-card__img" src={src} alt={alt} />
+
     return (
         <Grid item xs={2} sm={4} md={4} key={src}>
             <Item>
                 <CardMedia
-                    component="img"
-                    height="240"
+                    component={ImageCard}
+                    src={src}
                     image={src}
-                    sx={{ objectFit: 'cover' }}
-                    alt="presente divertido"
                 />
                 <FadeInText component="h5" className="gift-card__desc">
                     {description}
