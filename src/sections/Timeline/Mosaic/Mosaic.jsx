@@ -14,7 +14,7 @@ export default function Mosaic() {
       </RevelingText>
       <ImageList
         className="mosaic__list"
-        variant="quilted"
+        variant="masonry"
         cols={4}
         rowHeight={121}
       >
