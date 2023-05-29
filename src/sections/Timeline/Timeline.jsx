@@ -23,7 +23,7 @@ const timelineItems = [
             <ImageModal
                 alt="Nos conhecemos"
                 className="timeline__image"
-                src="timeline/nos-conhecemos.jpg"
+                src="timeline/nos-conhecemos2.jpg"
             />
         )
     },
@@ -36,7 +36,7 @@ const timelineItems = [
             <ImageModal
                 alt="Começamos a morar juntos"
                 className="timeline__image"
-                src="timeline/morar-juntos.jpg"
+                src="timeline/morar-juntos2.jpg"
             />
         )
     },
