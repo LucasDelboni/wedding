@@ -5,18 +5,22 @@ import Title from '../../components/Title';
 import Section from '../../components/Section';
 import FadeInText from '../../components/FadeInText';
 import FadeInImage from '../../components/FadeInImage';
+import { Box } from '@mui/material';
 
 
 export default function Profile() {
     return (
         <Section className="profile">
             <Title title="Os noivos" />
-            <Grid container justifyContent="center" columnSpacing={25}>
+            <Grid
+                container
+                justifyContent="center"
+                columnSpacing={{ xs: 0, md: 25 }}
+            >
                 <Grid item xs="auto">
-                    <FadeInImage
-                        className="profile__avatar"
-                        src="profile/lucas-profile2.jpg"
-                    />
+                    <Box className="profile__avatar">
+                        <FadeInImage className="profile__avatar-img" src="profile/lucas-profile2.jpg" />
+                    </Box>
                     <FadeInText className="profile__name">
                         Lucas
                     </FadeInText>
@@ -30,10 +34,9 @@ export default function Profile() {
                     </FadeInText>
                 </Grid>
                 <Grid item xs="auto">
-                    <FadeInImage
-                        className="profile__avatar"
-                        src="profile/adriana-profile2.jpg"
-                    />
+                    <Box className="profile__avatar">
+                        <FadeInImage className="profile__avatar-img" src="profile/adriana-profile2.jpg" />
+                    </Box>
                     <FadeInText className="profile__name">
                         Adriana
                     </FadeInText>

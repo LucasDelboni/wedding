@@ -36,7 +36,7 @@ const ImageModal = ({
       >
         <FadeInImage
           aria-hidden="true"
-          className={'image-modal-base__image'}
+          className={`image-modal-base__image`}
           onClick={handleOpen}
           src={src}
           alt={alt}
@@ -56,7 +56,7 @@ const ImageModal = ({
         <>
           <Box className="image-modal__header">
             <RevelingText className="image-modal__header-title" speed="fastest">{alt}</RevelingText>
-            <IconButton color="white" variant="text" onClick={handleClose} >
+            <IconButton sx={{ display: 'block', marginLeft: 'auto' }} color="white" variant="text" onClick={handleClose} >
               <FadeInText className="image-modal__header-close" component="span">
                 <CloseIcon sx={{ color: 'white' }} />
               </FadeInText>

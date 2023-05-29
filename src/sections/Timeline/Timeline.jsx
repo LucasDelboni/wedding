@@ -12,6 +12,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import RevelingText from '../../components/RevelingText';
 import FadeInText from '../../components/FadeInText';
 import ImageModal from '../../components/ImageModal';
+import Mosaic from './Mosaic';
 
 const timelineItems = [
     {
@@ -73,6 +74,7 @@ export default function Timeline() {
                     Your browser does not support the video tag.
                 </video>
             </Box>
+            <Mosaic />
         </>
     )
 }
