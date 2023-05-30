@@ -11,6 +11,7 @@
   display: block;
   margin: 0 auto 1rem;
   border-radius: 0.5rem;
+  max-width: 100%;
 }
 
 .gifts .gifts__pix-button {

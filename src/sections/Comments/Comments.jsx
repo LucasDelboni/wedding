@@ -34,8 +34,16 @@ export default function Comments() {
         setAllComents(allComents.concat([{ name, message, date: new Date() }]))
     }
 
+    function isValidName() {
+        return name.length > 2
+    }
+
+    function isValidMessge() {
+        return message.length > 5
+    }
+
     function isValidComment() {
-        return name.length > 2 && message.length > 5
+        return isValidName() && isValidMessge()
     }
 
     return (
@@ -71,6 +79,7 @@ export default function Comments() {
                         <FormLabel className="form-comments__label">Nome</FormLabel>
                         <TextField
                             required
+                            error={name !== '' && !isValidName()}
                             id="name"
                             label="Nome"
                             value={name}
@@ -82,6 +91,7 @@ export default function Comments() {
                         <FormLabel className="form-comments__label">Comentário</FormLabel>
                         <TextField
                             required
+                            error={message !== '' && !isValidMessge()}
                             id="message"
                             label="Comentário!"
                             multiline

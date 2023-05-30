@@ -3,6 +3,10 @@
   margin-bottom: 24px;
 }
 
+.bestmen__frame .lazy-image {
+  height: auto;
+}
+
 .bestmen__image {
   border: 4px solid #FCF9F7;
   height: 120px;

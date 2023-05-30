@@ -1,50 +1,98 @@
 .profile {
-  background-image: none;
+  background-image: url("/public/profile/green-brush.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-position: center calc(50% + 3rem);
+  background-position: center calc(50%);
   background-size: 65%;
 }
 
 .profile .profile__avatar {
-  border-radius: 50%;
-  height: 276px;
   margin-bottom: 2rem;
+  height: 120px;
+  width: 120px;
+}
+
+.profile__avatar-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
   object-fit: cover;
-  width: 276px;
 }
 
 .profile .profile__name {
   font-family: 'Roboto', sans-serif;
-  font-size: 2.25rem;
+  font-size: 1.25rem;
   font-weight: 200;
   text-align: center;
 }
 
 .profile .profile__and {
-  display: none;
   font-family: 'Playfair Display', sans-serif;
-  font-size: 2.25rem;
-  font-size: 100px;
-  margin-bottom: 200px;
-  margin-left: -25px;
-  margin-right: -50px;
+  font-size: 40px;
+  margin-bottom: 150px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .profile .profile__surname {
   font-family: var(--cursive-font);
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
-  margin-top: -0.75rem;
-  margin-bottom: 4rem;
+  margin-top: -0.25rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .profile {
+    background-position: center calc(50% + 1.5rem);
+  }
+
+  .profile .profile__avatar {
+    height: 180px;
+    width: 180px;
+  }
+
+  .profile .profile__name {
+    font-size: 2.25rem;
+  }
+
+  .profile .profile__surname {
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  .profile .profile__and {
+    font-size: 80px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 180px;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-  .profile .profile__and {
-    display: block;
+  .profile {
+    background-position: center calc(50% + 3rem);
   }
 
-  .profile {
-    background-image: url("/public/profile/green-brush.png");
+  .profile .profile__avatar {
+    height: 276px;
+    width: 276px;
+  }
+
+  .profile .profile__name {
+    font-size: 2.25rem;
+  }
+
+  .profile .profile__surname {
+    font-size: 3rem;
+    margin-top: -0.75rem;
+    margin-bottom: 4rem;
+  }
+
+  .profile .profile__and {
+    font-size: 100px;
+    margin-left: -25px;
+    margin-right: -50px;
   }
 }

@@ -16,3 +16,12 @@ body,
 p, h3 {
   margin: 0;
 }
+
+.lazy-image {
+  height: 100%;
+  width: 100%;
+}
+
+.lazy-image > img {
+  opacity: 1 !important;
+}

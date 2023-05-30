@@ -92,5 +92,13 @@ const itemData = [
     {
         img: 'bestmen/denis2.jpg',
         title: 'Denis',
-    }
+    },
+    {
+        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        title: 'Fabian',
+    },
+    {
+        img: 'https://fotografiamais.com.br/wp-content/uploads/2018/08/foto-preto-e-branco-fotografia-preto-e-branco-tecnicas.jpg',
+        title: 'Gabryel',
+    },
 ];
