@@ -71,7 +71,7 @@ export default function Comments() {
                     )}
             </List>
             <Paper className="form-comments" elevation={3}>
-                <FadeInText component="h3" className="form-comments__title">
+                <FadeInText component="h4" className="form-comments__title">
                     Deixe seu recado
                 </FadeInText>
                 <form autoComplete="off" onSubmit={handleSubmit}>
@@ -123,17 +123,17 @@ function Comment({ name, message, date }) {
 
     return (
         <Paper className="comment" elevation={3}>
-            <Box className="comment__title">
-                <FadeInText component="h3" className="comment__author">
-                    {name}
-                </FadeInText>
-                <FadeInText component="h3" className="comment__date">
-                    {` - ${day}/${month}/${year}`}
+            <FadeInText component="h3" className="comment__date">
+                {`${day}/${month}/${year}`}
+            </FadeInText>
+            <Box className="comment__text-container">
+                <FadeInText className="comment__text" speed="fast">
+                    {message}
                 </FadeInText>
             </Box>
-            <Box className="comment__text-container">
-                <RevelingText className="comment__text" speed="fast">
-                    {message}
+            <Box className="comment__title">
+                <RevelingText component="h3" className="comment__author" speed="slow">
+                    {`Ass: ${name}`}
                 </RevelingText>
             </Box>
         </Paper>
