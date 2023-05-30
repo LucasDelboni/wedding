@@ -18,7 +18,7 @@ export default function Mosaic() {
         cols={4}
         rowHeight={121}
       >
-        {Array.from(Array(130).keys()).map((photoIndex) => {
+        {Array.from(Array(92).keys()).map((photoIndex) => {
           const photoNumber = photoIndex + 1
 
           const sizes = {
