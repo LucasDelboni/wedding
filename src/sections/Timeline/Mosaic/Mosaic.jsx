@@ -1,12 +1,15 @@
 
 import './Mosaic.css'
 
-import { Box, ImageList, ImageListItem } from '@mui/material';
+import { Box, ImageList, ImageListItem, useMediaQuery } from '@mui/material';
 
 import ImageModal from '../../../components/ImageModal';
 import RevelingText from '../../../components/RevelingText';
 
 export default function Mosaic() {
+  const matches = useMediaQuery('(min-width:900px)')
+
+
   return (
     <Box className="mosaic">
       <RevelingText className="mosaic__title">
@@ -15,7 +18,7 @@ export default function Mosaic() {
       <ImageList
         className="mosaic__list"
         variant="masonry"
-        cols={4}
+        cols={matches ? 4 : 2}
         rowHeight={121}
       >
         {Array.from(Array(92).keys()).map((photoIndex) => {
