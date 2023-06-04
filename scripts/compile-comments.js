@@ -1,6 +1,5 @@
 'use strict'
 
-// const core = require('@actions/core')
 const { promises: fs } = require('fs')
 
 const main = async () => {
