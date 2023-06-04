@@ -39,7 +39,7 @@ export default function Comments() {
             }
         })
         setAlertIsOpen(true)
-        setAllComents(allComents.concat([{ name, message, date: new Date()/1000 }]))
+        setAllComents(allComents.concat([{ name, message, date: (new Date()/1000) }]))
         setMessage('')
         setName('')
     }
