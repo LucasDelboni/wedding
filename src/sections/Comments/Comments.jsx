@@ -152,7 +152,7 @@ function Comment({ name, message, date }) {
                 title={name}
             />
             <CardContent>
-                <FadeInText speed="fast">
+                <FadeInText speed="fast" className="comment__text">
                     {message}
                 </FadeInText>
             </CardContent>

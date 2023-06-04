@@ -23,8 +23,7 @@
 }
 
 .comment .comment__text {
-  font-size: 1.375rem;
-  font-family: var(--cursive-font);
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
   display: inline-block;
