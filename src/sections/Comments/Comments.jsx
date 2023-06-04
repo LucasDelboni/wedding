@@ -31,6 +31,8 @@ export default function Comments() {
                 message: message,
             }
         })
+        setMessage('')
+        setName('')
         setAllComents(allComents.concat([{ name, message, date: new Date() }]))
     }
 
