@@ -37,7 +37,7 @@
 
 .form-comments .form-comments__title {
   color: var(--primary-color);
-  font-family: "Montaga", serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   text-align: center;
   font-weight: 500;

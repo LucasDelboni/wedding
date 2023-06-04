@@ -1,6 +1,6 @@
 .event-card__title {
   color: var(--primary-color);
-  font-family: "Montaga", serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1;
