@@ -1,12 +1,12 @@
-import { Avatar, Box, Button, FormControl, FormLabel, List, Paper, Snackbar, TextField } from "@mui/material";
+import { Avatar, Button, Card, CardContent, CardHeader, FormControl, FormLabel, List, Paper, Snackbar, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "@emotion/styled";
 
 import './Comments.css'
 import FadeInText from '../../components/FadeInText';
-import RevelingText from '../../components/RevelingText';
 import FadeInImage from '../../components/FadeInImage';
 
 export default function Comments() {
@@ -131,23 +131,31 @@ export default function Comments() {
     )
 }
 
+const SmallAvatar = styled(Avatar)(() => ({
+    width: 35,
+    height: 35,
+}));
+  
+
 function Comment({ name, message, date }) {
     const day = (date.getDate() + '').length === 1 ? '0' + date.getDate() : date.getDate()
     const month = (date.getMonth() + '').length === 1 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1
     const year = date.getFullYear()
 
     return (
-        <Paper className="comment" elevation={3}>
+        <Card className="comment" elevation={3}>
             <FadeInText component="h3" className="comment__date">
                 {`${day}/${month}/${year}`}
             </FadeInText>
-            <Box className="comment__text-container">
-                <Avatar>{name.substr(0, 1)}</Avatar>
-                <div className="comment__title">{name}</div>
+            <CardHeader className="comment__text-container"
+                avatar={<SmallAvatar alt={name}>{name.substr(0, 1)}</SmallAvatar>}
+                title={name}
+            />
+            <CardContent>
                 <FadeInText speed="fast">
                     {message}
                 </FadeInText>
-            </Box>
-        </Paper>
+            </CardContent>
+        </Card>
     )
 }
