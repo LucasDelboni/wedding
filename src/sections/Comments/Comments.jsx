@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormLabel, List, Paper, Snackbar, TextField } from "@mui/material";
+import { Avatar, Box, Button, FormControl, FormLabel, List, Paper, Snackbar, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
@@ -28,7 +28,7 @@ export default function Comments() {
         setTimeout(() => {
             setAlertIsOpen(false);
         }, 3000);
-      }, [alertIsOpen]); 
+    }, [alertIsOpen]);
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -39,7 +39,7 @@ export default function Comments() {
             }
         })
         setAlertIsOpen(true)
-        setAllComents(allComents.concat([{ name, message, date: (new Date()/1000) }]))
+        setAllComents(allComents.concat([{ name, message, date: (new Date() / 1000) }]))
         setMessage('')
         setName('')
     }
@@ -142,14 +142,11 @@ function Comment({ name, message, date }) {
                 {`${day}/${month}/${year}`}
             </FadeInText>
             <Box className="comment__text-container">
-                <FadeInText className="comment__text" speed="fast">
+                <Avatar>{name.substr(0, 1)}</Avatar>
+                <div className="comment__title">{name}</div>
+                <FadeInText speed="fast">
                     {message}
                 </FadeInText>
-            </Box>
-            <Box className="comment__title">
-                <RevelingText component="h3" className="comment__author" speed="slow">
-                    {`Ass: ${name}`}
-                </RevelingText>
             </Box>
         </Paper>
     )
