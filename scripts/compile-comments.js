@@ -14,7 +14,7 @@ const main = async () => {
         .sort((a, b) => a.date - b.date)
 
     const data = JSON.stringify(sortedComments);
-    await fs.writeFile('public/comments2.json', data);
+    await fs.writeFile('public/comments.json', data);
     return data
 }
 
