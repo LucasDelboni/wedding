@@ -14,6 +14,7 @@ import Comments from './sections/Comments'
 import Bestmen from './sections/Bestmen';
 import HeroBanner from './sections/HeroBanner';
 import { ThemeProvider, createTheme } from '@mui/material';
+import Footer from './sections/Footer/Footer';
 
 function App() {
   const theme = createTheme({
@@ -43,6 +44,7 @@ function App() {
       <Section>
         <Comments />
       </Section>
+      <Footer/>
     </ThemeProvider>
   );
 }
