@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormLabel, List, Paper, TextField } from "@mui/material";
+import { Alert, Box, Button, FormControl, FormLabel, List, Paper, Snackbar, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
@@ -13,6 +13,7 @@ export default function Comments() {
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
     const [allComents, setAllComents] = useState([])
+    const [alertIsOpen, setAlertIsOpen] = useState(false)
 
     useEffect(() => {
         fetch('comments.json').then(commentsData => [
@@ -23,6 +24,12 @@ export default function Comments() {
 
     }, [])
 
+    useEffect(() => {
+        setTimeout(() => {
+            setAlertIsOpen(false);
+        }, 3000);
+      }, [alertIsOpen]); 
+
     function handleSubmit(event) {
         event.preventDefault()
         axios.post('https://couve.laury.dev/v2/entry/LucasDelboni/wedding/main/comments', {
@@ -31,9 +38,10 @@ export default function Comments() {
                 message: message,
             }
         })
+        setAlertIsOpen(true)
+        setAllComents(allComents.concat([{ name, message, date: new Date()/1000 }]))
         setMessage('')
         setName('')
-        setAllComents(allComents.concat([{ name, message, date: new Date() }]))
     }
 
     function isValidName() {
@@ -114,6 +122,11 @@ export default function Comments() {
                     </FormControl>
                 </form>
             </Paper>
+            <Snackbar
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+                open={alertIsOpen}
+                message="Comentário enviado com sucesso!"
+            />
         </>
     )
 }
