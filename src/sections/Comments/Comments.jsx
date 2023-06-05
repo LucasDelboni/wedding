@@ -11,43 +11,17 @@ import FadeInImage from '../../components/FadeInImage';
 import oldComments from './comments.json'
 
 export default function Comments() {
-    const [name, setName] = useState('')
-    const [message, setMessage] = useState('')
     const [allComents, setAllComents] = useState(oldComments)
-    const [alertIsOpen, setAlertIsOpen] = useState(false)
 
-
-    useEffect(() => {
-        setTimeout(() => {
-            setAlertIsOpen(false);
-        }, 3000);
-    }, [alertIsOpen]);
-
-    function handleSubmit(event) {
-        event.preventDefault()
+    function handleSubmit(name, message) {
         axios.post('https://couve.laury.dev/v2/entry/LucasDelboni/wedding/main/comments', {
             fields: {
                 name: name,
                 message: message,
             }
         })
-        setAlertIsOpen(true)
         setAllComents(allComents.concat([{ name, message, date: (new Date() / 1000) }]))
-        setMessage('')
-        setName('')
-    }
-
-    function isValidName() {
-        return name.length > 2
-    }
-
-    function isValidMessge() {
-        return message.length > 5
-    }
-
-    function isValidComment() {
-        return isValidName() && isValidMessge()
-    }
+    }    
 
     return (
         <>
@@ -73,11 +47,54 @@ export default function Comments() {
                         />
                     )}
             </List>
+            <CommentForm sendNewComment={handleSubmit}></CommentForm>
+        </>
+    )
+}
+
+const SmallAvatar = styled(Avatar)(() => ({
+    width: 35,
+    height: 35,
+}));
+
+function CommentForm({ sendNewComment }) {
+    const [name, setName] = useState('')
+    const [message, setMessage] = useState('')
+    const [alertIsOpen, setAlertIsOpen] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setAlertIsOpen(false);
+        }, 3000);
+    }, [alertIsOpen]);
+
+    function submit(event) {
+        event.preventDefault()
+        sendNewComment(name, message)
+        setAlertIsOpen(true)
+        setMessage('')
+        setName('')
+    }
+
+    function isValidName() {
+        return name.length > 2
+    }
+
+    function isValidMessge() {
+        return message.length > 5
+    }
+
+    function isValidComment() {
+        return isValidName() && isValidMessge()
+    }
+
+    return (
+        <>
             <Paper className="form-comments" elevation={3}>
                 <FadeInText component="h4" className="form-comments__title">
                     Deixe seu recado
                 </FadeInText>
-                <form autoComplete="off" onSubmit={handleSubmit}>
+                <form autoComplete="off" onSubmit={submit}>
                     <FormControl fullWidth>
                         <FormLabel className="form-comments__label">Nome</FormLabel>
                         <TextField
@@ -106,7 +123,7 @@ export default function Comments() {
                         <Button
                             variant="contained"
                             endIcon={<SendIcon />}
-                            onClick={handleSubmit}
+                            onClick={submit}
                             sx={{ color: 'white' }}
                             disabled={!isValidComment()}
                         >
@@ -123,12 +140,6 @@ export default function Comments() {
         </>
     )
 }
-
-const SmallAvatar = styled(Avatar)(() => ({
-    width: 35,
-    height: 35,
-}));
-  
 
 function Comment({ name, message, date }) {
     const day = (date.getDate() + '').length === 1 ? '0' + date.getDate() : date.getDate()
