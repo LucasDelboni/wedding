@@ -8,21 +8,14 @@ import styled from "@emotion/styled";
 import './Comments.css'
 import FadeInText from '../../components/FadeInText';
 import FadeInImage from '../../components/FadeInImage';
+import oldComments from './comments.json'
 
 export default function Comments() {
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
-    const [allComents, setAllComents] = useState([])
+    const [allComents, setAllComents] = useState(oldComments)
     const [alertIsOpen, setAlertIsOpen] = useState(false)
 
-    useEffect(() => {
-        fetch('comments.json').then(commentsData => [
-            commentsData.json().then(oldComments =>
-                setAllComents(oldComments)
-            )
-        ])
-
-    }, [])
 
     useEffect(() => {
         setTimeout(() => {
