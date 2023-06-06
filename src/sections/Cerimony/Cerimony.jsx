@@ -15,6 +15,7 @@ export default function Cerimony() {
           <EventCard
             title="Cerimônia"
             name="Paróquia Nossa Senhora Achiropita"
+            time="às 16 horas"
             address="Rua Treze de Maio, 478 - Bela Vista, São Paulo - SP, 01327-000"
             url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.246645972133!2d-46.64893698446621!3d-23.55739628468502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b6aa35b411%3A0xe29db2eacb26cb77!2sPar%C3%B3quia%20Nossa%20Senhora%20Achiropita!5e0!3m2!1spt-BR!2sbr!4v1675532048120!5m2!1spt-BR!2sbr"
           />
@@ -23,6 +24,7 @@ export default function Cerimony() {
           <EventCard
             title="Recepção"
             name="Spazio Giardino"
+            time="às 17h30"
             address="R. Padre Estevão Pernet, 276 - Tatuapé, São Paulo - SP, 03315-000"
             url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14630.818977306324!2d-46.5722102!3d-23.5431196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb635fd14accfeaa!2sEspa%C3%A7o%20Bonjardim!5e0!3m2!1spt-BR!2sbr!4v1675532681335!5m2!1spt-BR!2sbr"
           />
@@ -32,7 +34,7 @@ export default function Cerimony() {
   );
 }
 
-function EventCard({ title, name, address, url }) {
+function EventCard({ title, name, address, time, url }) {
   return (
     <Card className="event-card">
       <CardContent>
@@ -40,6 +42,7 @@ function EventCard({ title, name, address, url }) {
           {title}
         </FadeInText>
         <FadeInText className="event-card__text">{name}</FadeInText>
+        <FadeInText className="event-card__text">{time}</FadeInText>
         <FadeInText className="event-card__text">{address}</FadeInText>
         <AddressMap className='margin-box'
           title={name}
