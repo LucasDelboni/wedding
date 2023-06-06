@@ -5,7 +5,7 @@ import Title from "../../components/Title";
 import "./Countdown.css"
 
 
-const countDownDate = new Date(2023, 10, 7, 16).getTime();
+const countDownDate = new Date(2023, 9, 7, 16).getTime();
 
 export default function Countdown() {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
