@@ -31,9 +31,6 @@ function App() {
       <Section even>
         <Timeline />
       </Section>
-      <Section>
-        <Countdown />
-      </Section>
       <Section even>
         <Bestmen />
       </Section>
