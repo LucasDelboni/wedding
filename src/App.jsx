@@ -1,7 +1,6 @@
 import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import Timeline from './sections/Timeline';
-import Countdown from './sections/Countdown';
 import Cerimony from './sections/Cerimony';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
