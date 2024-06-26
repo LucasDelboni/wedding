@@ -8,32 +8,28 @@ import "./Countdown.css"
 const countDownDate = new Date(2023, 9, 7, 16).getTime();
 
 export default function Countdown() {
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [timeDistance, setTimeDistance] = useState(calculateTimeDistance());
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setTimeLeft(calculateTimeLeft(countDownDate));
+            setTimeDistance(calculateTimeDistance(countDownDate));
         }, 1000);
 
         return () => clearTimeout(timer);
     });
 
-    if (timeLeft === {}) {
-        <></>
-    }
-
     return (
         <>
-            <Title title="Contagem Regressiva"></Title>
+            <Title title="Quanto tempo já passou"></Title>
             <Stack
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
                 spacing={{ xs: 2, md: 8, lg: 12 }}>
-                <Circle text={timeLeft.days} text_bottom={"Dias"} />
-                <Circle text={timeLeft.hours} text_bottom={"Horas"} />
-                <Circle text={timeLeft.minutes} text_bottom={"Minutos"} />
-                <Circle text={timeLeft.seconds} text_bottom={"Segundos"} />
+                <Circle text={timeDistance.days} text_bottom={"Dias"} />
+                <Circle text={timeDistance.hours} text_bottom={"Horas"} />
+                <Circle text={timeDistance.minutes} text_bottom={"Minutos"} />
+                <Circle text={timeDistance.seconds} text_bottom={"Segundos"} />
             </Stack>
         </>
     )
@@ -48,18 +44,14 @@ function Circle({ text, text_bottom }) {
     )
 }
 
-function calculateTimeLeft(countDownDate) {
+function calculateTimeDistance(countDownDate) {
     const now = new Date().getTime();
     const distance = countDownDate - now;
 
-    if (distance < 0) {
-        return null;
-    }
-
     return {
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        days: Math.abs(Math.floor(distance / (1000 * 60 * 60 * 24))),
+        hours: Math.abs(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))),
+        minutes: Math.abs(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))),
+        seconds: Math.abs(Math.floor((distance % (1000 * 60)) / 1000))
     };
 }

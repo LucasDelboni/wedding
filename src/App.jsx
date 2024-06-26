@@ -10,6 +10,7 @@ import Profile from './sections/Profile';
 import Gifts from './sections/Gifts';
 import Section from './components/Section';
 import Comments from './sections/Comments'
+import Countdown from './sections/Countdown'
 import Bestmen from './sections/Bestmen';
 import HeroBanner from './sections/HeroBanner';
 import { ThemeProvider, createTheme } from '@mui/material';
@@ -29,6 +30,9 @@ function App() {
       <Profile />
       <Section even>
         <Timeline />
+      </Section>
+      <Section>
+        <Countdown />
       </Section>
       <Section even>
         <Bestmen />
